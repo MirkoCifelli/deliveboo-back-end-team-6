@@ -25,11 +25,13 @@ class Restaurant extends Model
         'user_id',
     ];
 
-
-
     //Relationships 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function typologies(){
+        return $this->belongsToMany(Typology::class);
     }
 
 
