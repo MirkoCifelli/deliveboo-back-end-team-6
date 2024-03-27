@@ -556,7 +556,7 @@ class DishSeeder extends Seeder
                 $restaurantId = null;
             }
 
-            $restaurant = Restaurant::create([
+            $restaurant = Dish::create([
                 'name' => $dish->name,
                 'img' => $dish->img,
                 'description' => $dish->description,
