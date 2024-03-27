@@ -518,40 +518,40 @@ class DishSeeder extends Seeder
 
             /* imposto la relazione con il ristorante, in base al tipo del piatto,
                 impostando la variab */
-            if($dish->type == 'Italiano'){
+            if($singleDish->type == 'Italiano'){
                 $restaurantId = 1;
             }
-            elseif($dish->type == 'Americano'){
+            elseif($singleDish->type == 'Americano'){
                 $restaurantId = 2;
             }
-            elseif($dish->type == 'Messicano'){
+            elseif($singleDish->type == 'Messicano'){
                 $restaurantId = 3;
             }
-            elseif($dish->type == 'Giapponese'){
+            elseif($singleDish->type == 'Giapponese'){
                 $restaurantId = 4;
             }
-            elseif($dish->type == 'Cinese'){
+            elseif($singleDish->type == 'Cinese'){
                 $restaurantId = 5;
             }
-            elseif($dish->type == 'Indiano'){
+            elseif($singleDish->type == 'Indiano'){
                 $restaurantId = 6;
             }
-            elseif($dish->type == 'Vegetariano'){
+            elseif($singleDish->type == 'Vegetariano'){
                 $restaurantId = 7;
             }
-            elseif($dish->type == 'Pesce'){
+            elseif($singleDish->type == 'Pesce'){
                 $restaurantId = 8;
             }
-            elseif($dish->type == 'Thailandese'){
+            elseif($singleDish->type == 'Thailandese'){
                 $restaurantId = 9;
             }
-            elseif($dish->type == 'Coreano'){
+            elseif($singleDish->type == 'Coreano'){
                 $restaurantId = 10;
             }
-            elseif($dish->type == 'Spagnolo'){
+            elseif($singleDish->type == 'Spagnolo'){
                 $restaurantId = 11;
             }
-            elseif($dish->type == 'Greco'){
+            elseif($singleDish->type == 'Greco'){
                 $restaurantId = 12;
             }
             else{
