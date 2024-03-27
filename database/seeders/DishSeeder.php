@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+// Models
 use App\Models\Dish;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -512,7 +514,7 @@ class DishSeeder extends Seeder
         $restaurantId = null;
 
 
-        foreach ($dishes as $dish) {
+        foreach ($dishes as $singleDish) {
 
             /* imposto la relazione con il ristorante, in base al tipo del piatto,
                 impostando la variab */
@@ -556,7 +558,7 @@ class DishSeeder extends Seeder
                 $restaurantId = null;
             }
 
-            $restaurant = Dish::create([
+            $dish = Dish::create([
                 'name' => $dish->name,
                 'img' => $dish->img,
                 'description' => $dish->description,
