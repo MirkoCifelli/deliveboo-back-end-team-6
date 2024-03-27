@@ -19,9 +19,7 @@ return new class extends Migration
             $table->string('vat_number', 11)->unique();
             $table->string('img', 1024)->nullable();
             $table->boolean('visible')->default(1);
-            $table->foreign('user_id')
-                  ->references('id')
-                  ->on('users');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }

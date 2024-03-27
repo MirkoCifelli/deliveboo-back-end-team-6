@@ -19,9 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->decimal('price');
             $table->boolean('visible');
-            $table->foreign('restaurant_id')
-                  ->references('id')
-                  ->on('restaurants');
+            $table->foreignId('restaurant_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

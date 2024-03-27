@@ -42,9 +42,9 @@ class UserSeeder extends Seeder
                 $randomIndex = random_int(0,5);
                 $initDomain = explode('@',fake()->email());
                 $endDomain = $domain[$randomIndex];
-                $user = User::created([
+                $user = User::create([
                     'name' => fake()->firstName(),
-                    'email'=> $initDomain.$endDomain,
+                    'email'=> $initDomain[0].'@'.$endDomain,
                     'password'=>'password'
                 ]);
             }
