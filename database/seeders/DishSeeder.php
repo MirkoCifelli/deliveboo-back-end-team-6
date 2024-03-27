@@ -19,7 +19,12 @@ class DishSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
+    {   
+
+        Schema::withoutForeignKeyConstraints(function () {
+            Dish::truncate();
+        });
+
         $dishes = [
             [
                 'name' => 'Lasagna Lussuria',
@@ -560,10 +565,11 @@ class DishSeeder extends Seeder
 
             $dish = Dish::create([
                 'name' => $singleDish['name'],
+                'slug' => str()->slug($singleDish['name']),
                 'img' => $singleDish['img'],
                 'description' => $singleDish['description'],
                 'price' => $singleDish['price'],
-                'visible' => $singleDish['price'],
+                'visible' => $singleDish['visible'],
                 'restaurant_id' => $restaurantId
             ]);
         };
