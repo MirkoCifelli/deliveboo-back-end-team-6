@@ -27,6 +27,7 @@ return new class extends Migration
                 ->onDelete('cascade');
 
             $table->primary(['dish_id', 'order_id']);
+            $table->tinyInteger('quantity');
         });
     }
 
