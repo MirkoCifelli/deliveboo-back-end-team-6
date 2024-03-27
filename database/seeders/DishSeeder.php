@@ -559,11 +559,11 @@ class DishSeeder extends Seeder
             }
 
             $dish = Dish::create([
-                'name' => $dish->name,
-                'img' => $dish->img,
-                'description' => $dish->description,
-                'price' => $dish->price,
-                'visible' => $dish->price,
+                'name' => $singleDish['name'],
+                'img' => $singleDish['img'],
+                'description' => $singleDish['description'],
+                'price' => $singleDish['price'],
+                'visible' => $singleDish['price'],
                 'restaurant_id' => $restaurantId
             ]);
         };
