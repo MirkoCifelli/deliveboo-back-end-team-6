@@ -518,40 +518,40 @@ class DishSeeder extends Seeder
 
             /* imposto la relazione con il ristorante, in base al tipo del piatto,
                 impostando la variab */
-            if($singleDish[type] == 'Italiano'){
+            if($singleDish['type'] == 'Italiano'){
                 $restaurantId = 1;
             }
-            elseif($singleDish[type] == 'Americano'){
+            elseif($singleDish['type'] == 'Americano'){
                 $restaurantId = 2;
             }
-            elseif($singleDish[type] == 'Messicano'){
+            elseif($singleDish['type'] == 'Messicano'){
                 $restaurantId = 3;
             }
-            elseif($singleDish[type] == 'Giapponese'){
+            elseif($singleDish['type'] == 'Giapponese'){
                 $restaurantId = 4;
             }
-            elseif($singleDish[type] == 'Cinese'){
+            elseif($singleDish['type'] == 'Cinese'){
                 $restaurantId = 5;
             }
-            elseif($singleDish[type] == 'Indiano'){
+            elseif($singleDish['type'] == 'Indiano'){
                 $restaurantId = 6;
             }
-            elseif($singleDish[type] == 'Vegetariano'){
+            elseif($singleDish['type'] == 'Vegetariano'){
                 $restaurantId = 7;
             }
-            elseif($singleDish[type] == 'Pesce'){
+            elseif($singleDish['type'] == 'Pesce'){
                 $restaurantId = 8;
             }
-            elseif($singleDish[type] == 'Thailandese'){
+            elseif($singleDish['type'] == 'Thailandese'){
                 $restaurantId = 9;
             }
-            elseif($singleDish[type] == 'Coreano'){
+            elseif($singleDish['type'] == 'Coreano'){
                 $restaurantId = 10;
             }
-            elseif($singleDish[type] == 'Spagnolo'){
+            elseif($singleDish['type'] == 'Spagnolo'){
                 $restaurantId = 11;
             }
-            elseif($singleDish[type] == 'Greco'){
+            elseif($singleDish['type'] == 'Greco'){
                 $restaurantId = 12;
             }
             else{
