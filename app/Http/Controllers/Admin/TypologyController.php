@@ -1,12 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\StoreRestaurantRequest;
-use App\Http\Requests\UpdateRestaurantRequest;
-use App\Models\Restaurant;
+use App\Http\Controllers\Controller;
 
-class RestaurantController extends Controller
+// Models
+use App\Models\Typology;
+
+// Requests 
+use App\Http\Requests\StoreTypologyRequest;
+use App\Http\Requests\UpdateTypologyRequest;
+
+class TypologyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +32,7 @@ class RestaurantController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRestaurantRequest $request)
+    public function store(StoreTypologyRequest $request)
     {
         //
     }
@@ -35,7 +40,7 @@ class RestaurantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Restaurant $restaurant)
+    public function show(Typology $typology)
     {
         //
     }
@@ -43,7 +48,7 @@ class RestaurantController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Restaurant $restaurant)
+    public function edit(Typology $typology)
     {
         //
     }
@@ -51,7 +56,7 @@ class RestaurantController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
+    public function update(UpdateTypologyRequest $request, Typology $typology)
     {
         //
     }
@@ -59,7 +64,7 @@ class RestaurantController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Restaurant $restaurant)
+    public function destroy(Typology $typology)
     {
         //
     }
