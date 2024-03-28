@@ -29,11 +29,9 @@ Route::prefix('admin')
     ->group(function () {
 
     Route::get('/dashboard', [AdminMainController::class, 'dashboard'])->name('dashboard');
-    Route::resource('restaurants', AdminRestaurantController::class);
-    Route::resource('typologies', AdminTypologyController::class);
+    Route::resource('restaurant', AdminRestaurantController::class);
     Route::resource('orders', AdminOrderController::class);
     Route::resource('dishes', AdminDishController::class);
-
 });
 
 require __DIR__.'/auth.php';

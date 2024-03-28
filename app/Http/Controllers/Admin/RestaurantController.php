@@ -22,7 +22,6 @@ class RestaurantController extends Controller
     {
         //creiamo una variabile user che riconosce se l'utente è autenticato 
         $user=Auth::user();
-        dd($user);
 
         //condizione: controlliamo se l'utente è autenticato e in tal caso associamo 
         //ad una variabile restaurant la relazione con uno dei ristoranti richiamando 
@@ -30,7 +29,9 @@ class RestaurantController extends Controller
         if($user){
             $restaurant = $user->restaurant;
             if($restaurant){
-                return view('admin.restaurant.index', compact('restaurant'));
+                dd($restaurant);
+
+                return view('admin.restaurants.index', compact('restaurant'));
             }else{
                 return view('admin.dashboard');  
             }
