@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+//support
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
 // Requests
@@ -18,7 +20,23 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        //
+        //creiamo una variabile user che riconosce se l'utente è autenticato 
+        $user=Auth::user();
+        dd($user);
+
+        //condizione: controlliamo se l'utente è autenticato e in tal caso associamo 
+        //ad una variabile restaurant la relazione con uno dei ristoranti richiamando 
+        //la funzione presente nel model di user
+        if($user){
+            $restaurant = $user->restaurant;
+            if($restaurant){
+                return view('admin.restaurant.index', compact('restaurant'));
+            }else{
+                return view('admin.dashboard');  
+            }
+        }else{
+            return redirect()->route('login'); 
+        }
     }
 
     /**
