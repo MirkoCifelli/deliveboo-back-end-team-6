@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Typology;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,11 +21,11 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
 
-            User::class,
-            Restaurant::class,
-            Typology::class,
-            Dish::class,
-            Order::class,
+            UserSeeder::class,
+            RestaurantSeeder::class,
+            TypologySeeder::class,
+            DishSeeder::class,
+            OrderSeeder::class,
         ]);
     }
 }
