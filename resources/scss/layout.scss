@@ -1,0 +1,72 @@
+body{
+    header{
+
+        padding: 20px;
+        .myContainer{
+
+            .row{
+
+                form{
+                    
+                    button{
+                        
+                        padding: 5px 15px;
+                        background: none;
+                        border: 2px solid rgb(211, 211, 211);
+                        color: rgb(112, 112, 112);
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+                
+    }
+
+    main{
+        .myContainer{
+
+            .row{
+                aside{
+
+                    border: 2px solid rgb(219, 219, 219);
+                    padding: 20px;
+                    height: calc(100vh - 100px);
+                    ul{
+                        padding: 0;
+                        list-style: none;
+                        li{
+
+                            margin: 20px 0;
+                            >*{
+                                text-decoration: none;
+                                color: black;
+                                text-transform: uppercase;
+                                padding-top: 12px;
+                                padding-bottom: 12px;
+                                width: 100%;
+                                display: block;
+                                text-align: center;
+                                background-color: rgb(219, 219, 219);
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                .col-8{
+                    
+                    border: 2px solid rgb(219, 219, 219);
+                    padding: 20px;
+                    height: calc(100vh - 100px);
+                }
+            }
+        }
+    }
+}
+
+.myContainer{
+    
+    width: 2000px;
+    margin: 0 auto;
+}
