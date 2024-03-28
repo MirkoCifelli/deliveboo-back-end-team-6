@@ -4,6 +4,9 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+// Support
+use Illuminate\Support\Facades\Auth;
+
 class UpdateDishRequest extends FormRequest
 {
     /**
@@ -11,7 +14,7 @@ class UpdateDishRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return Auth::check();
     }
 
     /**
@@ -22,7 +25,23 @@ class UpdateDishRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|max:120',
+            'slug'=> 'nullable|max:120',
+            'img' => 'nullable|max:1024',
+            'description' => 'required|max:4024', // CONTROLLA SE FUNZIONA SENNO MODIFICA DISH TABLE 
+            'price' => 'required|numeric',
+            'visible' => 'nullable|boolean',
+            'delete_img' => 'nullable|boolean',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Inserisci il nome del tuo piatto',
+            'description.required' => 'Inserisce la descrizione del tuo piatto',
+            'price.required' => 'Inserisci il prezzo del tuo piatto',
+            'delete_img.boolean' => 'Inserisci valore valido'
         ];
     }
 }
