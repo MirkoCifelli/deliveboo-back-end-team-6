@@ -96,31 +96,31 @@ class RestaurantController extends Controller
      */
     public function update(UpdateRestaurantRequest $request, string $slug)
     {
-        $validatedRestaurantData = $request->validated();
-        $restaurant = Restaurant::where('slug', $slug)->firstOrFail();
-        $ImgPath = $restaurant->img;
+        // $validatedRestaurantData = $request->validated();
+        // $restaurant = Restaurant::where('slug', $slug)->firstOrFail();
+        // $ImgPath = $restaurant->img;
 
-        if (isset($validatedRestaurantData['img'])) {
-            if($ImgPath != null){
-                Storage::disk('public')->delete($restaurant->img);
-            }
+        // if (isset($validatedRestaurantData['img'])) {
+        //     if($ImgPath != null){
+        //         Storage::disk('public')->delete($restaurant->img);
+        //     }
 
-            $ImgPath = Storage::disk('public')->put('images', $validatedRestaurantData['img']);
+        //     $ImgPath = Storage::disk('public')->put('images', $validatedRestaurantData['img']);
 
-            }else if (isset($validatedRestaurantData['delete_img'])) {
-                Storage::disk('public')->delete($restaurant->img);
+        //     }else if (isset($validatedRestaurantData['delete_img'])) {
+        //         Storage::disk('public')->delete($restaurant->img);
 
-                $ImgPath = null;
-        }
-
-
-        $validatedRestaurantData['img'] = $ImgPath;
-        $validatedRestaurantData['slug'] = $slug = str()->slug($validatedRestaurantData['company_name']);
-        $restaurant->update($validatedRestaurantData);
-        // dd($validationResult);
+        //         $ImgPath = null;
+        // }
 
 
-        return redirect()->route('admin.restaurant.index');
+        // $validatedRestaurantData['img'] = $ImgPath;
+        // $validatedRestaurantData['slug'] = $slug = str()->slug($validatedRestaurantData['company_name']);
+        // $restaurant->update($validatedRestaurantData);
+        // // dd($validationResult);
+
+
+        // return redirect()->route('admin.restaurant.index');
 
     }
 
