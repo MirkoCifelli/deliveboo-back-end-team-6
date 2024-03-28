@@ -2,6 +2,9 @@
 
 namespace App\Http\Requests;
 
+//support
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreRestaurantRequest extends FormRequest
@@ -11,7 +14,7 @@ class StoreRestaurantRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return Auth::check();
     }
 
     /**
@@ -22,7 +25,21 @@ class StoreRestaurantRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'company_name' => 'required|max:128',
+            'slug'=> 'nullable|max:128',
+            'address' => 'required|max:128',
+            'vat_number' => 'nullable|max:11',
+            'img' => 'nullable|max:1024',
+            'visible' => 'nullable|boolean',
+            'delete_img' => 'nullable|boolean',
         ];
     }
+    public function messages(): array
+    {
+        return [
+            'company_name.required' => 'Inserisci un Titolo del tuo Ristorante',
+            'address.required'=> "Inserisci l'indirizzo del tuo ristorante",
+        ];
+    }
+
 }
