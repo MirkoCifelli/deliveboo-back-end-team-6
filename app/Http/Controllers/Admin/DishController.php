@@ -66,7 +66,7 @@ class DishController extends Controller
      */
     public function show(string $slug)
     {
-        $dish = Dish::where('slug', $slug)->firstOfFail();
+        $dish = Dish::where('slug', $slug)->firstOrFail();
         return view('admin.dishes.show', compact('dish'));
     }
 

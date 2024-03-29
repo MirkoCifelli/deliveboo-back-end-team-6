@@ -5,6 +5,7 @@ import '~resources/scss/layout.scss';
 import '~resources/scss/dashboard.scss';
 import '~resources/scss/menu.scss';
 import '~resources/scss/restaurantCreate.scss';
+import '~resources/scss/dishView.scss';
 
 import * as bootstrap from 'bootstrap';
 
