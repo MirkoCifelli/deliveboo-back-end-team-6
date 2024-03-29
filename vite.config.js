@@ -13,6 +13,7 @@ export default defineConfig({
                 'resources/scss/menu.scss',
                 'resources/scss/restaurantCreate.scss',
                 'resources/scss/dishView.scss',
+                'resources/scss/DishesIndex.scss',
                 'resources/js/app.js',
             ],
             refresh: true,

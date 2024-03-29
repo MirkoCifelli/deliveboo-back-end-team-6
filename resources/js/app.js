@@ -7,6 +7,7 @@ import '~resources/scss/menu.scss';
 import '~resources/scss/restaurantCreate.scss';
 import '~resources/scss/dishCreate.scss';
 import '~resources/scss/dishView.scss';
+import '~resources/scss/DishesIndex.scss';
 
 import * as bootstrap from 'bootstrap';
 
