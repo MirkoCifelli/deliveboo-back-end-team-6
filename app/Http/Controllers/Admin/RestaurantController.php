@@ -73,9 +73,14 @@ class RestaurantController extends Controller
             $ImgPath = Storage::disk('public')->put('images', $validatedRestaurantData['img']);
         }
         //immagine di defaut nulla e apriamo uan condizione:"se nelle nostra validation c'è l'immagina allora salviamo il percorso:disco publico e put(mettila nella cartella images)"
-
-
         $validatedRestaurantData['img'] = $ImgPath;
+
+        $slug = str()->slug($validatedRestaurantData['company_name']);
+        $validatedRestaurantData['slug'] = $slug;
+
+        $userId = Auth::user()->id;
+        $validatedRestaurantData['user_id'] = $userId;
+
         $restaurant = Restaurant::create($validatedRestaurantData);
         // dd($validatedRestaurantData);
 
