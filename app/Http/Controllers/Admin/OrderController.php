@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
+// Support
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+
+
 // Models
 use App\Models\Order;
 
@@ -19,8 +24,26 @@ class OrderController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
+
         //
+        $restaurant = $user->restaurant;
+        $dishes = $restaurant->dishes;
+        $order = $dishes->order;
+
+        return view('admin.orders.index', compact('order'));
+
     }
+
+        /**
+     * Display the specified resource.
+     */
+    public function show(Order $order)
+    {
+        return view('admin.orders.show', compact('order'));
+
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -38,13 +61,6 @@ class OrderController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Order $order)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
