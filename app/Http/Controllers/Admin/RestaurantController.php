@@ -84,7 +84,7 @@ class RestaurantController extends Controller
         $restaurant = Restaurant::create($validatedRestaurantData);
         // dd($validatedRestaurantData);
 
-        return redirect()->route('admin.restaurant.show', ['restaurant' => $restaurant->slug]);
+        return redirect()->route('admin.dashboard');
     }
 
     /**
