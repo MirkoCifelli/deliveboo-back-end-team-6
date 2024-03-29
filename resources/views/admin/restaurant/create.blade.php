@@ -76,6 +76,24 @@
                             <input class="form-control" type="file" id="img" name="img">
                         </div>
 
+                        <div class="mb-3">
+                            <label for="typology_id" class="form-label">Typology</label>
+                            @foreach ($typologies as $typology)
+                                <div class="form-check form-check-inline">
+                                    <input
+                                        @if (old('typology') != null && in_array($typology->id, old('typologies')))
+                                            checked
+                                        @endif
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="typology-{{ $typology->id }}"
+                                        name="typologies[]"
+                                        value="{{ $typology->id }}">
+                                    <label class="form-check-label" for="typology-{{ $typology->id }}">{{ $typology->name }}</label>
+                                </div>
+                            @endforeach
+                        </div>
+
                         <div>
                             <button type="submit" class="btn btn-dark w-100">
                                 Aggiungi il mio ristorante

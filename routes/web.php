@@ -29,7 +29,10 @@ Route::prefix('admin')
     ->group(function () {
 
     Route::get('/dashboard', [AdminMainController::class, 'dashboard'])->name('dashboard');
-    Route::resource('restaurant', AdminRestaurantController::class);
+    Route::resource('restaurant', AdminRestaurantController::class)->only([
+        'create',
+        'store'
+    ]);
     Route::resource('orders', AdminOrderController::class);
     Route::resource('dishes', AdminDishController::class);
 });

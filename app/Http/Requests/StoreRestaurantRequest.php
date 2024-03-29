@@ -32,6 +32,7 @@ class StoreRestaurantRequest extends FormRequest
             'img' => 'nullable|max:1024',
             'visible' => 'nullable|boolean',
             'delete_img' => 'nullable|boolean',
+            'typologies' => 'nullable|array|exists:typologies,id'
         ];
     }
     public function messages(): array

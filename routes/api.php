@@ -1,10 +1,12 @@
 <?php
-//Controllers
+// Controllers
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypologyController;
 
+// Models
 use App\Models\Restaurant;
 use App\Models\Typology;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

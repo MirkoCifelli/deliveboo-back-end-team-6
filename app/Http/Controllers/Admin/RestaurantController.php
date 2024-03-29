@@ -13,6 +13,7 @@ use App\Http\Requests\UpdateRestaurantRequest;
 
 // Models
 use App\Models\Restaurant;
+use App\Models\Typology;
 
 class RestaurantController extends Controller
 {
@@ -57,7 +58,9 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        return view('admin.restaurant.create');
+
+        $typologies = Typology::all();
+        return view('admin.restaurant.create', compact('typologies'));
     }
 
     /**
@@ -83,6 +86,12 @@ class RestaurantController extends Controller
 
         $restaurant = Restaurant::create($validatedRestaurantData);
         // dd($validatedRestaurantData);
+
+        if (isset($validatedRestaurantData['typologies'])) {
+            foreach ($validatedRestaurantData['typologies'] as $singletypologyId) {
+                $restaurant->typologies()->attach($singletypologyId);
+            }
+        }
 
         return redirect()->route('admin.dashboard');
     }
