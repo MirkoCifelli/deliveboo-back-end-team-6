@@ -16,7 +16,7 @@ class Dish extends Model
         'description',
         'price',
         'visible',
-        'resturant_id'
+        'restaurant_id'
     ];
 
     protected $hidden = [

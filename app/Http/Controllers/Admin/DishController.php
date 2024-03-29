@@ -7,7 +7,8 @@ use App\Http\Controllers\Controller;
 // Support
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-
+// Helpers
+use Illuminate\Support\Str;
 // Models
 use App\Models\Dish;
 
@@ -56,7 +57,25 @@ class DishController extends Controller
 
         $validatedDishData['img'] = $dishImgPath;
 
-        $dish = Dish::create($validatedDishData);
+        $slug = Str::slug($validatedDishData['name']);
+
+        $user = Auth::user();
+
+        $restaurant = $user->restaurant;
+
+        $validatedDishData['restaurant_id'] = $restaurant->id;
+
+
+
+        $dish = Dish::create([
+            'name' => $validatedDishData['name'],
+            'slug' => $slug,
+            'description' => $validatedDishData['description'],
+            'price' => $validatedDishData['price'],
+            'visible' => $validatedDishData['visible'],
+            'restaurant_id' => $validatedDishData['restaurant_id'],
+            'img' => $dishImgPath,
+        ]);
 
         return redirect()->route('admin.dishes.show', ['dish' => $dish->slug]);
     }
@@ -66,7 +85,7 @@ class DishController extends Controller
      */
     public function show(string $slug)
     {
-        $dish = Dish::where('slug', $slug)->firstOfFail();
+        $dish = Dish::where('slug', $slug)->firstOrFail();
         return view('admin.dishes.show', compact('dish'));
     }
 
@@ -90,28 +109,26 @@ class DishController extends Controller
         $dishImgPath = $dish->img;
 
         if (isset($validatedDishData['img'])) {
-            if($dishImgPath != null){
+            if ($dishImgPath != null) {
                 Storage::disk('public')->delete($dish->img);
             }
 
             $dishImgPath = Storage::disk('public')->put('images', $validatedDishData['img']);
-        }
-        else if(isset($validatedDishData['delete_img'])) {
+        } else if (isset($validatedDishData['delete_img'])) {
             Storage::disk('public')->delete($dish->img);
 
             $dishImgPath = null;
         }
 
         $validatedDishData['img'] = $dishImgPath;
-        
+
         $slug = str()->slug($validatedDishData['name']);
         $validatedDishData['slug'] = $slug;
-        
+
         $dish->update($validatedDishData);
 
 
         return redirect()->route('admin.dishes.index');
-
     }
 
     /**
