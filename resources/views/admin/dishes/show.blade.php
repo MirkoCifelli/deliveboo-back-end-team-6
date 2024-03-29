@@ -3,15 +3,48 @@
 @section('page-title', 'Dishes Show')
 
 @section('main-content')
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h1 class="text-center text-success">
-                        Sei loggato! Sei su Dishes Show
+<section class="dishes-show">
+    <div class="row g-0">
+        <div class="col d-flex justify-content-center">
+            <div class="my-card">
+                <div class="my-card-body">
+                    <h1 class="text-center mb-5">
+                        {{ $dish->name }}
                     </h1>
+
+                    <p class="mb-3">
+                        {{ $dish->description }}
+                    </p>
+
+                    @if ($dish->img != null)
+                        <div>
+                            <div class="cover_img">
+                                <img src="{{ asset('storage/'.$dish->description) }}">
+                            </div>
+                        </div>
+                    @endif
+
+                    <div class="info">
+                        Prezzo: 
+                        <span>
+                            {{ $dish->price.'€' }}
+                        </span>
+                    </div>
+
+                    @if ($dish->visible == true)
+                        <span>
+                            Disponibile
+                        </span>
+
+                    @else
+                        <span>
+                            Non disponibile
+                        </span>
+                    @endif
+
                 </div>
             </div>
         </div>
     </div>
+</section>
 @endsection
