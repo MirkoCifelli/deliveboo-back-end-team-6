@@ -5,10 +5,20 @@
 @section('main-content')
     <section class="menu">
         <div class="img-container">
-            
-            <h1>
-                {{ $restaurant->company_name }}
-            </h1>
+            <div class="container_top">
+                <div>
+                    <h1>
+                        {{ $restaurant->company_name }}
+                    </h1>
+                </div>
+                <div>
+                    <button class="button">
+                        <a href="{{ route('admin.dishes.create') }}">
+                            Add new Dish
+                        </a>
+                    </button>
+                </div>
+            </div>
         </div>
         {{-- @dd($dishes) --}}
         <div class="mycontaineroverflow">
