@@ -24,6 +24,8 @@ body{
     }
 
     main{
+
+        overflow: hidden;
         .myContainer{
 
             .row{
@@ -37,7 +39,7 @@ body{
                         list-style: none;
                         li{
 
-                            margin: 20px 0;
+                            margin-bottom: 20px;
                             >*{
                                 text-decoration: none;
                                 color: black;
@@ -54,10 +56,9 @@ body{
                         }
                     }
                 }
-                .col-8{
+                .col-10{
                     
                     border: 2px solid rgb(219, 219, 219);
-                    padding: 20px;
                     height: calc(100vh - 100px);
                 }
             }

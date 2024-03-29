@@ -14,9 +14,9 @@
         <header>
             <div class="myContainer">
 
-                <div class="row justify-content-end ">
+                <div class="row justify-content-end g-0">
 
-                    <form class="col-auto text-center" method="POST" action="{{ route('logout') }}">
+                    <form class="col-auto p-0 text-center" method="POST" action="{{ route('logout') }}">
                         @csrf
         
                         <button type="submit" class="logout">
@@ -30,7 +30,7 @@
 
         <main>
             <div class="myContainer">
-                <div class="row">
+                <div class="row g-0">
                     <aside class="col d-flex flex-column ">
                         <ul>
                             <li>
@@ -50,7 +50,7 @@
                             </li>
                         </ul>
                     </aside>
-                    <div class="col-10">
+                    <div class="col-10 ms-4">
                         @yield('main-content')
                     </div>
                 </div>
