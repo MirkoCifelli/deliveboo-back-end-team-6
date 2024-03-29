@@ -22,7 +22,6 @@
             padding: 20px;
             .restaurant-info{
                 list-style: none;
-                width: 70%;
                 border: 2px solid rgb(219, 219, 219);
                 padding: 20px;
                 margin-bottom: 40px;
@@ -45,7 +44,6 @@
             .restaurant-menu{
                 
                 display: flex;
-                width: 70%;
                 flex-wrap: wrap;
                 overflow-y: auto;
                 .dish{
