@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Auth;
 
+//Models
+use App\Models\Restaurant;
+use App\Models\Dish;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -30,7 +34,9 @@ class MainController extends Controller
 
             if($restaurant){
 
-                return view('admin.dashboard');
+                $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+
+                return view('admin.dashboard', compact('restaurant', 'dishes'));
             }else{
 
                 return view('admin.restaurant.create');

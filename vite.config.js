@@ -8,6 +8,9 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/scss/app.scss',
+                'resources/scss/layout.scss',
+                'resources/scss/dashboard.scss',
+                'resources/scss/menu.scss',
                 'resources/js/app.js',
             ],
             refresh: true,
