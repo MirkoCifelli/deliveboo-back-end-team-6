@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 // Models
 use App\Models\Order;
+use App\Models\Dish;
 
 // Request
 use App\Http\Requests\StoreOrderRequest;
@@ -25,13 +26,36 @@ class OrderController extends Controller
     public function index()
     {
         $user = Auth::user();
-
-        //
         $restaurant = $user->restaurant;
-        $dishes = $restaurant->dishes;
-        $order = $dishes->order;
+        $orders = $restaurant->orders; // <-- soluzione corretta
 
-        return view('admin.orders.index', compact('order'));
+        // ---------------------------------------------------------------------------------------------
+
+        /*
+            Prendiamo tutti i piatti del ristorante
+        */
+        // // $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+
+        /*
+            Inizzializziamo una variabile che rappresenta tutti gli ordini del singolo ristorante
+        */
+        // // $allRestaurantOrders = [];
+
+        /*
+            Ad ogni iterazione del ciclo for, ciclo su tutti gli ordini DI OGNI SINGOLO DISH
+
+            e lo inserisco all'interno di $allRestaurantOrders
+        */
+        // // for ($i=0; $i < count($dishes) ; $i++) { 
+
+        // //     foreach ($dishes[$i]->orders as $key => $singleOrder) {
+                
+        // //         array_push($allRestaurantOrders, $singleOrder);
+        // //     }
+        // // };
+
+
+        return view('admin.orders.index', compact('orders'));
 
     }
 
