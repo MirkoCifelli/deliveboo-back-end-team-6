@@ -39,7 +39,7 @@ class MainController extends Controller
                 return view('admin.dashboard', compact('restaurant', 'dishes'));
             }else{
 
-                return view('admin.restaurant.create');
+                return redirect()->route('admin.restaurant.create');
             }
 
         }else{
