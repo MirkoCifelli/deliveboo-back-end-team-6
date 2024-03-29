@@ -25,10 +25,10 @@ class DishController extends Controller
         $user = Auth::user();
 
         $restaurant = $user->restaurant;
-        $dishes = $restaurant->dishes;
+        $dishes = Dish::where('restaurant_id',$restaurant->id)->get();
         // $dishes = $user->restaurant->dishes; DA PROVARE 
 
-        return view('admin.dishes.index', compact('dishes'));
+        return view('admin.dishes.index', compact('dishes','restaurant'));
     }
 
     /**
@@ -66,7 +66,7 @@ class DishController extends Controller
      */
     public function show(string $slug)
     {
-        $dish = Dish::where('slug', $slug)->firstOfFail();
+        $dish = Dish::where('slug', $slug)->firstOrFail();
         return view('admin.dishes.show', compact('dish'));
     }
 
@@ -75,7 +75,7 @@ class DishController extends Controller
      */
     public function edit(string $slug)
     {
-        $dish = Dish::where('slug', $slug)->firstOfFail();
+        $dish = Dish::where('slug', $slug)->firstOrFail();
         return view('admin.dishes.edit', compact('dish'));
     }
 
@@ -85,7 +85,7 @@ class DishController extends Controller
     public function update(UpdateDishRequest $request, string $slug)
     {
         $validatedDishData = $request->validated();
-        $dish = Dish::where('slug', $slug)->firstOfFail();
+        $dish = Dish::where('slug', $slug)->firstOrFail();
 
         $dishImgPath = $dish->img;
 

@@ -12,6 +12,7 @@ export default defineConfig({
                 'resources/scss/dashboard.scss',
                 'resources/scss/menu.scss',
                 'resources/scss/restaurantCreate.scss',
+                'resources/scss/DishesIndex.scss',
                 'resources/js/app.js',
             ],
             refresh: true,
