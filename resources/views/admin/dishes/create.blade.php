@@ -37,8 +37,7 @@
                     <label for="description" class="form-label">Descrizione</label>
                     <textarea type="text" class=" @error('description') is-invalid @enderror" id="description" name="description"
                         placeholder="Inserisci la descrizione del piatto" maxlength="4024" value="{{ old('description') }}" rows="4"
-                        cols="50">
-                    </textarea>
+                        cols="50"></textarea>
                     @error('description')
                         <div class="error">
                             {{ $message }}

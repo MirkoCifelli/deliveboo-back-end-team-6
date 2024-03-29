@@ -1,4 +1,4 @@
-.dish-create {
+.dish-create, .dish-edit {
     padding: 40px;
     height: 100vh;
 
@@ -18,8 +18,7 @@
         }
         textarea {
             width: 100%;
-            padding: 0;
-            font-size: inherit;
+            padding: 10px;
         }
         input {
             width: 100%;
