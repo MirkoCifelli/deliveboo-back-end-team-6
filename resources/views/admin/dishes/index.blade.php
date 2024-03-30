@@ -26,7 +26,7 @@
                 <div class="mycontainermenu">
                     <div class="cardmenu">
                         <div class="container_card_img">
-                            <img src="" alt="">
+                            <img src="{{ asset('storage/'.$Singledish->img) }}">
                         </div>
                         <div class="container_card_content">
                             <ul>

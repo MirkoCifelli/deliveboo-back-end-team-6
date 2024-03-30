@@ -19,7 +19,7 @@
                     @if ($dish->img != null)
                         <div>
                             <div class="cover_img">
-                                <img src="{{ asset('storage/'.$dish->description) }}">
+                                <img src="{{ asset('storage/'.$dish->img) }}">
                             </div>
                         </div>
                     @endif
