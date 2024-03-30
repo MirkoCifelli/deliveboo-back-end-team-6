@@ -285,7 +285,7 @@ return [
             ],
             [
                 'name' => 'Salmone alla Griglia con Salsa Tropicale',
-                'img' => 'Pesce.jpg',
+                'img' => 'Ristorante-8/salmone-alla-griglia-con-salsa-tropicale.jpg',
                 'description' => 'Filetto di salmone fresco alla griglia, condito con una salsa esotica a base di mango, lime e peperoncino, servito con riso basmati e verdure alla griglia.',
                 'price' => 22.90,
                 'visible' => true,
@@ -293,7 +293,7 @@ return [
             ],
             [
                 'name' => 'Tonno Teriyaki Tentazione',
-                'img' => 'Pesce.jpg',
+                'img' => 'Ristorante-8/tonno-teriyaki.jpg',
                 'description' => 'Filetto di tonno fresco marinato in salsa teriyaki, grigliato alla perfezione, servito su un letto di spinaci saltati con riso al vapore.',
                 'price' => 24.50,
                 'visible' => true,
@@ -301,7 +301,7 @@ return [
             ],
             [
                 'name' => 'Ceviche Calamari Creolo',
-                'img' => 'Pesce.jpg',
+                'img' => 'Ristorante-8/ceviche-calamari.jpg',
                 'description' => 'Calamari freschi marinati in succo di lime, coriandolo fresco, peperoncino rosso e cipolla rossa, serviti con chips di mais croccanti.',
                 'price' => 18.75,
                 'visible' => true,
@@ -309,7 +309,7 @@ return [
             ],
             [
                 'name' => 'Gamberi al Curry Cremoso',
-                'img' => 'Pesce.jpg',
+                'img' => 'Ristorante-8/gamberi-al-curry.jpg',
                 'description' => 'Gamberoni grandi saltati con cipolle, aglio, peperoni e curry in una salsa di latte di cocco, serviti con riso basmati e naan caldo.',
                 'price' => 21.20,
                 'visible' => true,
@@ -317,7 +317,7 @@ return [
             ],
             [
                 'name' => 'Spigola alla Mediterranea',
-                'img' => 'Pesce.jpg',
+                'img' => 'Ristorante-8/spigola-alla-mediterranea.jpg',
                 'description' => 'Filetto di spigola fresco cotto al forno con olive kalamata, pomodorini, capperi, aglio e prezzemolo, servito con patate al forno.',
                 'price' => 26.80,
                 'visible' => true,
@@ -325,7 +325,7 @@ return [
             ],
             [
                 'name' => 'Pad Thai Paradise',
-                'img' => 'Thailandese.jpg',
+                'img' => 'Ristorante-9/pad-thai.jpg',
                 'description' => 'Vermicelli di riso saltati con gamberetti freschi, tofu croccante, uova sbattute, germogli di soia, arachidi tritate e salsa di tamarindo, serviti con lime e coriandolo fresco.',
                 'price' => 16.50,
                 'visible' => true,
@@ -333,7 +333,7 @@ return [
             ],
             [
                 'name' => 'Tom Yum Travolgente',
-                'img' => 'Thailandese.jpg',
+                'img' => 'Ristorante-9/tom-yum.jpg',
                 'description' => 'Zuppa piccante a base di gamberi freschi, funghi straw e pomodori ciliegia, arricchita con citronella, lime, foglie di lime kaffir e peperoncino rosso, servita con riso al vapore.',
                 'price' => 18.90,
                 'visible' => true,
@@ -341,7 +341,7 @@ return [
             ],
             [
                 'name' => 'Massaman Magnifico',
-                'img' => 'Thailandese.jpg',
+                'img' => 'Ristorante-9/massaman.jpg',
                 'description' => 'Stufato aromatico di manzo cotto a fuoco lento con latte di cocco, patate, cipolle e arachidi, arricchito con spezie thailandesi e servito con riso basmati.',
                 'price' => 20.80,
                 'visible' => true,
@@ -349,7 +349,7 @@ return [
             ],
             [
                 'name' => 'Green Curry Glorioso',
-                'img' => 'Thailandese.jpg',
+                'img' => 'Ristorante-9/green-curry.jpg',
                 'description' => 'Curry verde cremoso a base di pollo, melanzane, peperoni, bambù e basilico thai, servito con riso jasmin.',
                 'price' => 19.50,
                 'visible' => true,
@@ -357,7 +357,7 @@ return [
             ],
             [
                 'name' => 'Mango Sticky Rice Sorpresa',
-                'img' => 'Thailandese.jpg',
+                'img' => 'Ristorante-9/mango-sticky-rice.jpg',
                 'description' => 'Riso glutinoso al vapore servito con fette di mango maturo, cotto in una salsa di latte di cocco dolce e aromatizzato con semi di sesamo tostati.',
                 'price' => 14.75,
                 'visible' => true,
@@ -365,7 +365,7 @@ return [
             ],
             [
                 'name' => 'Bibimbap Brillante',
-                'img' => 'Coreano.jpg',
+                'img' => 'Ristorante-10/bibimbap.jpg',
                 'description' => 'Un piatto coreano tradizionale composto da riso al vapore, verdure saltate, carne di manzo marinata, uovo fritto e salsa gochujang, servito con kimchi.',
                 'price' => 18.90,
                 'visible' => true,
@@ -373,7 +373,7 @@ return [
             ],
             [
                 'name' => 'Bulgogi Bello',
-                'img' => 'Coreano.jpg',
+                'img' => 'Ristorante-10/bulgogi.jpg',
                 'description' => 'Sottili fette di manzo marinato con salsa di soia, aglio, sesamo e zucchero, grigliate alla perfezione e servite con riso al vapore e insalata di cetrioli.',
                 'price' => 22.50,
                 'visible' => true,
@@ -381,7 +381,7 @@ return [
             ],
             [
                 'name' => 'Kimchi Jigae Jubilant',
-                'img' => 'Coreano.jpg',
+                'img' => 'Ristorante-10/kimchi-jigae.jpg',
                 'description' => 'Zuppa coreana piccante a base di kimchi fermentato, tofu, carne di maiale, cipolle e peperoncino, servita bollente con riso.',
                 'price' => 16.80,
                 'visible' => true,
@@ -389,7 +389,7 @@ return [
             ],
             [
                 'name' => 'Tteokbokki Tempo',
-                'img' => 'Coreano.jpg',
+                'img' => 'Ristorante-10/tteokbokki.jpg',
                 'description' => 'Bastoncini di riso al vapore cotti in una salsa piccante di gochujang, serviti con uova sode, pesce e verdure miste.',
                 'price' => 14.50,
                 'visible' => true,
@@ -397,7 +397,7 @@ return [
             ],
             [
                 'name' => 'Japchae Giubiloso',
-                'img' => 'Coreano.jpg',
+                'img' => 'Ristorante-10/japchae.jpg',
                 'description' => 'Vermicelli di patate dolci saltati con carne di manzo marinata, verdure miste e funghi, conditi con salsa di soia e olio di sesamo, serviti con kimchi.',
                 'price' => 19.75,
                 'visible' => true,
@@ -405,7 +405,7 @@ return [
             ],
             [
                 'name' => 'Paella Party',
-                'img' => 'Spagnolo.jpg',
+                'img' => 'Ristorante-11/paella.jpg',
                 'description' => 'La classica paella spagnola con gamberi, pollo, cozze, vongole e piselli, cotta lentamente in un brodo di zafferano e servita con fette di limone.',
                 'price' => 25.90,
                 'visible' => true,
@@ -413,7 +413,7 @@ return [
             ],
             [
                 'name' => 'Tapas Tapenade',
-                'img' => 'Spagnolo.jpg',
+                'img' => 'Ristorante-11/tapas-tapenade.jpg',
                 'description' => 'Una selezione di tapas spagnole, inclusi patatas bravas, albóndigas, croquetas, e pinchos con olive e formaggio, serviti con una salsa di pomodoro piccante.',
                 'price' => 25.90,
                 'visible' => true,
@@ -421,7 +421,7 @@ return [
             ],
             [
                 'name' => 'Gazpacho Gustoso',
-                'img' => 'Spagnolo.jpg',
+                'img' => 'Ristorante-11/gazpagho.jpg',
                 'description' => "Zuppa fredda di pomodoro, peperoni, cetrioli, cipolle e aglio, condita con olio d'oliva e aceto di sherry, servita con crostini all'aglio.",
                 'price' => 18.50,
                 'visible' => true,
@@ -429,7 +429,7 @@ return [
             ],
             [
                 'name' => 'Tortilla de Patatas Triunfante',
-                'img' => 'Spagnolo.jpg',
+                'img' => 'Ristorante-11/tortilla-de-patatas-triunfante.jpg',
                 'description' => 'Tortilla spagnola tradizionale con patate, cipolle e uova, cotta lentamente fino a doratura, servita con una generosa porzione di alioli.',
                 'price' => 15.75,
                 'visible' => true,
@@ -437,7 +437,7 @@ return [
             ],
             [
                 'name' => 'Churros Fiesta',
-                'img' => 'Spagnolo.jpg',
+                'img' => 'Ristorante-11/churros.jpg',
                 'description' => 'Churros fritti croccanti serviti con cioccolato caldo denso e salsa di caramello, accompagnati da una pallina di gelato alla vaniglia.',
                 'price' => 10.50,
                 'visible' => true,
@@ -445,7 +445,7 @@ return [
             ],
             [
                 'name' => 'Moussaka Magnifica',
-                'img' => 'Greco.jpg',
+                'img' => 'Ristorante-12/moussaka-magnifica.jpg',
                 'description' => 'Un piatto greco classico con strati di melanzane grigliate, carne macinata di agnello, pomodori, patate e besciamella, gratinato al forno.',
                 'price' => 18.90,
                 'visible' => true,
@@ -453,7 +453,7 @@ return [
             ],
             [
                 'name' => 'Souvlaki Squisito',
-                'img' => 'Greco.jpg',
+                'img' => 'Ristorante-12/souvlaki-squisito.jpg',
                 'description' => 'Spiedini di carne di maiale marinata con olive, peperoni e cipolle, grigliati alla perfezione e serviti con pita calda, tzatziki e insalata greca.',
                 'price' => 16.50,
                 'visible' => true,
@@ -461,7 +461,7 @@ return [
             ],
             [
                 'name' => 'Moussaka Magnifica',
-                'img' => 'Greco.jpg',
+                'img' => 'Ristorante-12/moussaka-magnifica.jpg',
                 'description' => 'Un piatto greco classico con strati di melanzane grigliate, carne macinata di agnello, pomodori, patate e besciamella, gratinato al forno.',
                 'price' => 18.90,
                 'visible' => true,
@@ -469,7 +469,7 @@ return [
             ],
             [
                 'name' => 'Dolmades Delizia',
-                'img' => 'Greco.jpg',
+                'img' => 'Ristorante-12/dolmades-delizia.jpg',
                 'description' => "Foglie di vite ripiene di riso, pomodori secchi, pinoli e uvetta, cotte lentamente in brodo di limone e servite con una salsa di yogurt all'aglio.",
                 'price' => 14.80,
                 'visible' => true,
@@ -477,7 +477,7 @@ return [
             ],
             [
                 'name' => 'Horiatiki Heaven',
-                'img' => 'Greco.jpg',
+                'img' => 'Ristorante-12/horiatiki-heaven.jpg',
                 'description' => "Insalata greca classica con pomodori maturi, cetrioli, olive kalamata, feta, cipolle rosse e peperoncini, condita con olio d'oliva e origano.",
                 'price' => 12.50,
                 'visible' => true,
@@ -485,7 +485,7 @@ return [
             ],
             [
                 'name' => 'Baklava Bliss',
-                'img' => 'Greco.jpg',
+                'img' => 'Ristorante-12/baklava-bliss.jpg',
                 'description' => 'Strati di pasta fillo croccante ripieni di noci tritate e cannella, bagnati con sciroppo di miele profumato e serviti con una pallina di gelato alla vaniglia.',
                 'price' => 9.95,
                 'visible' => true,
