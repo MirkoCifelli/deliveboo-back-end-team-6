@@ -14,6 +14,8 @@ export default defineConfig({
                 'resources/scss/restaurantCreate.scss',
                 'resources/scss/dishView.scss',
                 'resources/scss/DishesIndex.scss',
+                'resources/scss/guest-layout.scss',
+                'resources/scss/login-registration.scss',
                 'resources/js/app.js',
             ],
             refresh: true,

@@ -12,9 +12,9 @@
                     </h1>
                 </div>
                 <div>
-                    <button class="button">
+                    <button class="button add">
                         <a href="{{ route('admin.dishes.create') }}">
-                            Add new Dish
+                            Aggiungi piatto
                         </a>
                     </button>
                 </div>
@@ -42,7 +42,7 @@
                                 </li>
                                 <li>
                                     <h5>
-                                        {{ $Singledish->price }} 
+                                        {{ $Singledish->price.'€' }} 
                                     </h5>
                                 </li>
                                 <li> @if ($Singledish->visible != 1)
