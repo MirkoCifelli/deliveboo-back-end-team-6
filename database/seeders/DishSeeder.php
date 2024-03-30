@@ -11,6 +11,7 @@ use Illuminate\Database\Seeder;
 // Helpers
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 
 class DishSeeder extends Seeder
@@ -28,14 +29,14 @@ class DishSeeder extends Seeder
         $dishes = config('dishes.dishes');
 
         $restaurantId = null;
-
+        
 
         foreach ($dishes as $singleDish) {
 
             $dish = Dish::create([
                 'name' => $singleDish['name'],
                 'slug' => str()->slug($singleDish['name']),
-                'img' => $singleDish['img'],
+                'img' => 'images/'.$singleDish['img'],
                 'description' => $singleDish['description'],
                 'price' => $singleDish['price'],
                 'visible' => $singleDish['visible'],
