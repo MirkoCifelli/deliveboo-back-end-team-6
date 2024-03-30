@@ -91,9 +91,10 @@
             background-color: black;
         }
         &.add {
-            background-color: #4ada78;
+            background-color: #c5c5c5;
             &:hover {
                 transform: scale(1.1);
+                background-color: black;
             }
         }
         a {

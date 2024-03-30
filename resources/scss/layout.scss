@@ -54,6 +54,8 @@ body {
                                 &:hover {
                                     background-color: black;
                                     color: white;
+                                    transform: scale(0.95);
+
                                 }
                                 &:hover li {
                                     border-bottom: 1px solid black;
