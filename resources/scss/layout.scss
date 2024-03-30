@@ -1,21 +1,16 @@
-body{
-    header{
-
+body {
+    header {
         padding: 20px;
-        .myContainer{
-
-            .row{
-
-                form{
-                    
-                    button{
-                        
+        .myContainer {
+            .row {
+                form {
+                    button {
                         padding: 5px 15px;
                         background: none;
                         border: 2px solid black;
                         font-weight: 600;
                         text-transform: uppercase;
-                        &:hover{
+                        &:hover {
                             color: white;
                             background-color: black;
                         }
@@ -23,28 +18,24 @@ body{
                 }
             }
         }
-                
     }
 
-    main{
-
+    main {
         overflow: hidden;
-        .myContainer{
-
-            .row{
-                aside{
-
+        .myContainer {
+            .row {
+                aside {
                     border: 2px solid black;
                     height: calc(100vh - 100px);
-                    ul{
+                    ul {
                         padding: 0;
                         list-style: none;
                         margin: 0;
                         height: 100%;
-                        li{
+                        li {
                             height: calc(100% / 4);
                             border-bottom: 1px solid rgb(219, 219, 219);
-                            >*{
+                            > * {
                                 height: 100%;
                                 display: flex;
                                 justify-content: center;
@@ -59,31 +50,29 @@ body{
                                 background-color: white;
                                 font-size: 1.1rem;
                                 font-weight: 600;
-                                transition: all .2s ease-in-out;
-                                &:hover{
+                                transition: all 0.2s ease-in-out;
+                                &:hover {
                                     background-color: black;
                                     color: white;
                                 }
-                                &:hover li{
+                                &:hover li {
                                     border-bottom: 1px solid black;
-
                                 }
                             }
                         }
                     }
                 }
-                .col-10{
-                    
+                .col-10 {
                     border: 2px solid black;
                     height: calc(100vh - 100px);
+                    
                 }
             }
         }
     }
 }
 
-.myContainer{
-    
+.myContainer {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;

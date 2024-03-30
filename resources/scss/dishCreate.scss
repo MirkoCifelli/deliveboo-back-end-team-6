@@ -1,15 +1,21 @@
-.dish-create, .dish-edit {
+.dish-create,
+.dish-edit {
     padding: 40px;
     height: 100vh;
-
-    h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        color: black;
-        margin: 0;
-        margin-bottom: 20px;
+    .img-container {
+        height: 15%;
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: black;
+            margin: 0;
+            margin-bottom: 20px;
+        }
     }
-
+    .div-edit {
+        height: 75%;
+        overflow-y: auto;
+    }
     form {
         label {
             display: block;
@@ -35,6 +41,7 @@
                 background-color: transparent !important;
             }
         }
+
         //ERROR
         .error {
             min-height: 70px;
@@ -66,7 +73,15 @@
                 margin: 0 0 0 8px;
             }
         }
-
+        .preview {
+            width: 200px;
+            height: 100px;
+            object-fit: cover;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
         div {
             button {
                 width: 20%;
