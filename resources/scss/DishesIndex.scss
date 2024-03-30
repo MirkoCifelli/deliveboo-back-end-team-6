@@ -1,6 +1,5 @@
-.menu{
-
-    .container_top{
+.menu {
+    .container_top {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -8,30 +7,24 @@
         padding: 20px;
     }
 
-    .img-container{
-
+    .img-container {
         height: 150px;
         background-color: rgb(240, 240, 240);
         padding: 20px;
         border-bottom: 2px solid black;
-        h1{
-
+        h1 {
             margin: 0;
             font-weight: 700;
         }
     }
 
-
-    .mycontaineroverflow{
-
-        height: calc(100vh - 250px );
+    .mycontaineroverflow {
+        height: calc(100vh - 250px);
         overflow-y: auto;
-        .mycontainermenu{
-
+        .mycontainermenu {
             display: flex;
             flex-direction: column;
-            .cardmenu{
-
+            .cardmenu {
                 padding: 20px;
                 margin-bottom: 20px;
                 border-bottom: 1px solid rgb(213, 213, 213);
@@ -40,53 +33,47 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                .container_card_img{
+                .container_card_img {
                     border: 1px solid black;
                     height: 200px;
                     width: 200px;
+                    object-fit: cover;
+                    object-position: center;
+                    overflow: hidden;
+                    img {
+                        height: 100%;
+                    }
                 }
-                .container_card_content{
-
+                .container_card_content {
                     width: 50%;
-                    ul{
-
+                    ul {
                         padding: 0;
-                        li{
-
-                            h2{
-
+                        li {
+                            h2 {
                             }
 
-                            p{
-                                
+                            p {
                             }
 
-                            h5{
-                                
+                            h5 {
                             }
 
-                            h6{
-                                
+                            h6 {
                             }
                         }
                     }
                 }
 
-                .button_container{
-
+                .button_container {
                     width: auto;
-                    div{
-
-
-                        
+                    div {
                     }
                 }
             }
         }
     }
 
-    .button{
-
+    .button {
         width: 100%;
         border: none;
         color: white;
@@ -97,39 +84,32 @@
         font-size: 16px;
         margin: 4px 2px;
         background-color: rgb(197, 197, 197);
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         cursor: pointer;
-        &:hover{
-
+        &:hover {
             background-color: black;
         }
-        &.add{
-
+        &.add {
             background-color: #4ada78;
-            &:hover{
+            &:hover {
                 transform: scale(1.1);
             }
         }
-        a{
+        a {
             text-decoration: none;
             color: white;
         }
-        a{
-
+        a {
         }
     }
 
-    
-
-    li{
+    li {
         list-style: none;
-        h5{
+        h5 {
             color: red;
         }
-        h6{
+        h6 {
             color: grey;
         }
     }
-
-    
 }
