@@ -5,7 +5,7 @@ return [
         'dishes'=>[
             [
                 'name' => 'Lasagna Lussuria',
-                'img' => 'Italiano.jpg',
+                'img' => 'Ristorante-1/lasagna.jpg',
                 'description' => 'Strati di pasta fresca, ragù di carne, besciamella e formaggio, cotti al forno fino a doratura.',
                 'price' => 19.75,
                 'visible' => true,
@@ -13,7 +13,7 @@ return [
             ],
             [
                 'name' => 'Tagliatelle Trastevere',
-                'img' => 'Italiano.jpg',
+                'img' => 'Ristorante-1/tagliatelle.png',
                 'description' => 'Tagliatelle fatte in casa condite con una salsa cremosa al pesto di basilico, pomodori secchi e pinoli tostati.',
                 'price' => 17.80,
                 'visible' => true,
@@ -21,7 +21,7 @@ return [
             ],
             [
                 'name' => 'Gnocchi Gourmet',
-                'img' => 'Italiano.jpg',
+                'img' => 'Ristorante-1/gnocchi.jpg',
                 'description' => 'Gnocchi di patate fatti in casa, serviti con una delicata salsa al gorgonzola e noci tostate.',
                 'price' => 20.40,
                 'visible' => true,
@@ -29,7 +29,7 @@ return [
             ],
             [
                 'name' => 'Pappardelle Primavera',
-                'img' => 'Italiano.jpg',
+                'img' => 'Ristorante-1/pappardelle.jpg',
                 'description' => "Larghe fettuccine condite con una miscela di verdure di stagione saltate in padella con olio d'oliva e aglio.",
                 'price' => 15.20,
                 'visible' => true,
@@ -37,7 +37,7 @@ return [
             ],
             [
                 'name' => 'Cannelloni Capriccio',
-                'img' => 'Italiano.jpg',
+                'img' => 'Ristorante-1/cannelloni.jpg',
                 'description' => 'Cannelloni ripieni di carne macinata, ricotta e spinaci, cotti al forno con salsa besciamella e formaggio grana.',
                 'price' => 18.25,
                 'visible' => true,
@@ -45,7 +45,7 @@ return [
             ],
             [
                 'name' => 'Texas BBQ Brisket Bonanza',
-                'img' => 'Americano.jpg',
+                'img' => 'Ristorante-2/brisket.jpeg',
                 'description' => 'Fetta di petto di manzo affumicato lentamente per ore, ricoperto con una salsa barbecue texana piccante e servito con fagioli al forno e pane di mais.',
                 'price' => 22.50,
                 'visible' => true,
@@ -53,7 +53,7 @@ return [
             ],
             [
                 'name' => 'Southern Fried Chicken Supreme',
-                'img' => 'Americano.jpg',
+                'img' => 'Ristorante-2/fried-chicken.jpg',
                 'description' => 'Cosce di pollo marinato in spezie, impanate e fritte fino a diventare croccanti, servite con salsa di miele piccante e purea di patate.',
                 'price' => 18.95,
                 'visible' => true,
@@ -61,7 +61,7 @@ return [
             ],
             [
                 'name' => 'New York Cheesecake Delight',
-                'img' => 'Americano.jpg',
+                'img' => 'Ristorante-2/cheesecake.jpg',
                 'description' => 'Cheesecake cremosa con una base di biscotti, ricoperta da una generosa dose di salsa di fragole fresche e panna montata.',
                 'price' => 10.80,
                 'visible' => true,
@@ -69,7 +69,7 @@ return [
             ],
             [
                 'name' => 'California Cobb Salad Celebration',
-                'img' => 'Americano.jpg',
+                'img' => 'Ristorante-2/cobb-salad.jpg',
                 'description' => 'Insalata mista croccante con pollo alla griglia, bacon croccante, uova sode, avocado a fette, pomodori ciliegini e formaggio blu, condita con una vinaigrette balsamica.',
                 'price' => 15.75,
                 'visible' => true,
@@ -77,7 +77,7 @@ return [
             ],
             [
                 'name' => 'Philly Cheese Steak Spectacular',
-                'img' => 'Americano.jpg',
+                'img' => 'Ristorante-2/cheese-steaks.jpg',
                 'description' => 'Fettine di manzo grigliate, peperoni e cipolle saltati, ricoperti di formaggio provolone fuso, serviti su un panino hoagie tostato.',
                 'price' => 16.40,
                 'visible' => true,
@@ -85,7 +85,7 @@ return [
             ],
             [
                 'name' => 'Taco Tornado Tropicale',
-                'img' => 'Messicano.jpg',
+                'img' => 'Ristorante-3/tacos.jpg',
                 'description' => 'Tortilla di mais ripiena di carne di manzo marinata con spezie messicane, avocado a fette, pomodori freschi, formaggio cheddar e salsa piccante, servita con riso e fagioli neri.',
                 'price' => 12.95,
                 'visible' => true,
@@ -93,7 +93,7 @@ return [
             ],
             [
                 'name' => 'Enchiladas Esotiche',
-                'img' => 'Messicano.jpg',
+                'img' => 'Ristorante-3/enchiladas.jpg',
                 'description' => 'Tortillas di mais ripiene di pollo alla griglia, cipolle e peperoni, ricoperte con una salsa rossa piccante e formaggio fuso, accompagnate da guacamole e pico de gallo.',
                 'price' => 14.50,
                 'visible' => true,
@@ -101,7 +101,7 @@ return [
             ],
             [
                 'name' => 'Quesadilla Quattro Formaggi',
-                'img' => 'Messicano.jpg',
+                'img' => 'Ristorante-3/quesadilla.jpg',
                 'description' => 'Tortilla di farina ripiena di una miscela di quattro formaggi, jalapeños affettati e cipolle rosse, grigliata fino a ottenere una croccantezza dorata, servita con salsa di pomodoro.',
                 'price' => 10.80,
                 'visible' => true,
@@ -109,7 +109,7 @@ return [
             ],
             [
                 'name' => 'Burrito Bomba Mexicana',
-                'img' => 'Messicano.jpg',
+                'img' => 'Ristorante-3/burrito.jpg',
                 'description' => 'Grande tortilla di farina ripiena di riso, fagioli neri, carne di maiale marinata, formaggio Monterey Jack, guacamole e pico de gallo, avvolta e grigliata fino a doratura, servita con salsa di avocado.',
                 'price' => 13.75,
                 'visible' => true,
@@ -117,7 +117,7 @@ return [
             ],
             [
                 'name' => 'Nachos Nirvana',
-                'img' => 'Messicano.jpg',
+                'img' => 'Ristorante-3/nachos.jpeg',
                 'description' => 'Totopos di mais croccanti ricoperti con formaggio fuso, chili con carne, fagioli neri, peperoncini jalapeños affettati e panna acida, guarniti con salsa di pomodoro e cipolle verdi.',
                 'price' => 11.20,
                 'visible' => true,
@@ -125,7 +125,7 @@ return [
             ],
             [
                 'name' => 'Sushi Sensation Sette Mari',
-                'img' => 'Giapponese.jpg',
+                'img' => 'Ristorante-4/sushi.jpg',
                 'description' => 'Assortimento di sushi fresco, inclusi nigiri di salmone, tonno e gamberetti, roll di California e roll di tempura di gamberi, servito con salsa di soia e zenzero marinato.',
                 'price' => 24.50,
                 'visible' => true,
@@ -133,7 +133,7 @@ return [
             ],
             [
                 'name' => 'Ramen Raffinato con Tonkotsu',
-                'img' => 'Giapponese.jpg',
+                'img' => 'Ristorante-4/ramen.jpg',
                 'description' => 'Brodo di tonkotsu ricco e cremoso arricchito con noodle ramen cotti al dente, maiale affumicato a fette, uovo marinato e cipolla verde.',
                 'price' => 16.80,
                 'visible' => true,
@@ -141,7 +141,7 @@ return [
             ],
             [
                 'name' => 'Tempura Tornado di Gamberi',
-                'img' => 'Giapponese.jpg',
+                'img' => 'Ristorante-4/tempura.jpg',
                 'description' => 'Gamberi freschi e croccanti avvolti in una leggera pastella e fritti fino alla perfezione, serviti con una salsa a base di soia e zenzero.',
                 'price' => 18.95,
                 'visible' => true,
@@ -149,7 +149,7 @@ return [
             ],
             [
                 'name' => 'Donburi del Pescatore Piccante',
-                'img' => 'Giapponese.jpg',
+                'img' => 'Ristorante-4/donburi.jpg',
                 'description' => 'Riso bianco cotto al vapore, servito in una ciotola con una miscela di pesce crudo marinato con salsa di soia piccante, avocado a fette, cetrioli e alghe nori.',
                 'price' => 22.60,
                 'visible' => true,
@@ -157,7 +157,7 @@ return [
             ],
             [
                 'name' => 'Sashimi Sorpresa dello Chef',
-                'img' => 'Giapponese.jpg',
+                'img' => 'Ristorante-4/sashimi.jpg',
                 'description' => 'Selezione di sashimi freschi, inclusi salmone, tonno e branzino, tagliati a mano dallo chef e serviti con wasabi fresco e salsa di soia.',
                 'price' => 28.75,
                 'visible' => true,
@@ -165,7 +165,7 @@ return [
             ],
             [
                 'name' => 'Drago Dorato Generoso',
-                'img' => 'Cinese.jpg',
+                'img' => 'Ristorante-5/pollo-marinato.jpeg',
                 'description' => 'Pollo marinato con spezie asiatiche, saltato con verdure croccanti in una salsa agrodolce, servito su un letto di riso al vapore.',
                 'price' => 14.90,
                 'visible' => true,
@@ -173,7 +173,7 @@ return [
             ],
             [
                 'name' => 'Riso Fritto del Tesoro Orientale',
-                'img' => 'Cinese.jpg',
+                'img' => 'Ristorante-5/riso-fritto.jpg',
                 'description' => 'Riso al vapore saltato in padella con uova sbattute, piselli, carote, cipolle e gamberetti, condito con salsa di soia e olio di sesamo.',
                 'price' => 16.20,
                 'visible' => true,
@@ -181,7 +181,7 @@ return [
             ],
             [
                 'name' => 'Manzo Mongolo Magnifico',
-                'img' => 'Cinese.jpg',
+                'img' => 'Ristorante-5/manzo-mongolo.jpeg',
                 'description' => 'Strisce di manzo marinato in salsa teriyaki, saltate con cipolle, peperoni e funghi, servite su un letto di spaghetti di riso.',
                 'price' => 18.75,
                 'visible' => true,
@@ -189,7 +189,7 @@ return [
             ],
             [
                 'name' => 'Gamberetti Grigliati al Sesamo',
-                'img' => 'Cinese.jpg',
+                'img' => 'Ristorante-5/gamberetti-grigliati.jpg',
                 'description' => 'Cubetti di tofu avvolti in una leggera pastella e fritti fino a doratura, serviti con una salsa piccante e una spruzzata di cipolla verde.',
                 'price' => 20.40,
                 'visible' => true,
@@ -197,7 +197,7 @@ return [
             ],
             [
                 'name' => 'Tempura Tofu Tripudio',
-                'img' => 'Cinese.jpg',
+                'img' => 'Ristorante-5/tempura-tofu.jpg',
                 'description' => 'Pollo marinato con spezie asiatiche, saltato con verdure croccanti in una salsa agrodolce, servito su un letto di riso al vapore.',
                 'price' => 12.50,
                 'visible' => true,
@@ -205,7 +205,7 @@ return [
             ],
             [
                 'name' => 'Paneer Tikka Treat',
-                'img' => 'Indiano.jpg',
+                'img' => 'Ristorante-6/paneer-tikka.jpg',
                 'description' => 'Cubetti di paneer marinate in una miscela di yogurt e spezie indiane, infilzati su spiedini e grigliati al carbone, serviti con chutney di menta e insalata.',
                 'price' => 17.50,
                 'visible' => true,
@@ -213,7 +213,7 @@ return [
             ],
             [
                 'name' => 'Butter Chicken Bliss',
-                'img' => 'Indiano.jpg',
+                'img' => 'Ristorante-6/butter-chicken.jpg',
                 'description' => 'Pollo marinato in una salsa cremosa di pomodori, burro, panna e spezie aromatiche, servito con riso basmati profumato e naan caldo.',
                 'price' => 19.80,
                 'visible' => true,
@@ -221,7 +221,7 @@ return [
             ],
             [
                 'name' => 'Dal Tadka Triumph',
-                'img' => 'Indiano.jpg',
+                'img' => 'Ristorante-6/dal-tadka.jpg',
                 'description' => 'Lenticchie rosse cotte lentamente con spezie indiane, finocchi, pomodori e coriandolo fresco, servite con riso al vapore e pane naan.',
                 'price' => 15.90,
                 'visible' => true,
@@ -229,7 +229,7 @@ return [
             ],
             [
                 'name' => 'Aloo Gobi Delight',
-                'img' => 'Indiano.jpg',
+                'img' => 'Ristorante-6/aloo-gobi.jpg',
                 'description' => 'Cubetti di patate e cavolfiore saltati con cipolle, pomodori, zenzero e spezie, finiti con una spruzzata di succo di limone e coriandolo fresco.',
                 'price' => 16.50,
                 'visible' => true,
@@ -237,7 +237,7 @@ return [
             ],
             [
                 'name' => 'Vegetarian Biryani Bonanza',
-                'img' => 'Indiano.jpg',
+                'img' => 'Ristorante-6/vegetable-biryani.jpg',
                 'description' => 'Una miscela fragrante di riso basmati, verdure miste, mandorle tostate, uvetta e spezie, cotta lentamente a fuoco lento e servita con raita fresco.',
                 'price' => 18.25,
                 'visible' => true,
@@ -245,7 +245,7 @@ return [
             ],
             [
                 'name' => 'Zen Zucchini Zenzero Zucchine',
-                'img' => 'Vegetariano.jpg',
+                'img' => 'Ristorante-7/zucchine-trifolate.jpg',
                 'description' => 'Zucchine saltate con zenzero fresco, aglio e peperoncino rosso, servite su un letto di couscous al limone e prezzemolo.',
                 'price' => 14.90,
                 'visible' => true,
@@ -253,7 +253,7 @@ return [
             ],
             [
                 'name' => 'Fagioli Funghi Fantasiae',
-                'img' => 'Vegetariano.jpg',
+                'img' => 'Ristorante-7/fagioli-funghi.jpg',
                 'description' => 'Fagioli borlotti e funghi misti saltati con cipolla, aglio e timo fresco, serviti su una fetta di pane integrale tostato.',
                 'price' => 16.50,
                 'visible' => true,
@@ -261,7 +261,7 @@ return [
             ],
             [
                 'name' => 'Quinoa Quotidiana con Verdure',
-                'img' => 'Vegetariano.jpg',
+                'img' => 'Ristorante-7/quinoa-verdure.jpg',
                 'description' => "Quinoa tricolore cotta al vapore, mescolata con pomodorini, cetrioli, peperoni, olive nere e prezzemolo fresco, condita con olio d'oliva e aceto balsamico.",
                 'price' => 17.80,
                 'visible' => true,
@@ -269,7 +269,7 @@ return [
             ],
             [
                 'name' => 'Melanzane al Miele Mediterraneo',
-                'img' => 'Vegetariano.jpg',
+                'img' => 'Ristorante-7/melanzane-miele.jpg',
                 'description' => 'Fette di melanzane grigliate, marinate con miele di agrumi, timo fresco e pepe nero, servite con salsa di yogurt greco e mandorle tostate.',
                 'price' => 16.50,
                 'visible' => true,
@@ -277,7 +277,7 @@ return [
             ],
             [
                 'name' => 'Insalata Intensa di Lenticchie',
-                'img' => 'Vegetariano.jpg',
+                'img' => 'Ristorante-7/insalata-lenticchie.jpg',
                 'description' => 'Lenticchie cotte al dente, mescolate con pomodorini, cetrioli, feta sbriciolata, olive kalamata e menta fresca, condite con una vinaigrette al limone.',
                 'price' => 15.60,
                 'visible' => true,
