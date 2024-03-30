@@ -17,17 +17,17 @@ return [
     ],
 
     'allTypologiesImg' => [
-        'Italiano.jpg',
-        'Americano.jpg',
-        'Messicano.jpg',
-        'Giapponese.jpg',
-        'Cinese.jpg',
-        'Indiano.jpg',
-        'Vegetariano.jpg',
-        'Pesce.jpg',
-        'Thailandese.jpg',
-        'Coreano.jpg',
-        'Spagnolo.jpg',
-        'Greco.jpg'
+        'Typologies/Italiano.jpg',
+        'Typologies/Americano.jpg',
+        'Typologies/Messicano.jpg',
+        'Typologies/Giapponese.jpg',
+        'Typologies/Cinese.jpg',
+        'Typologies/Indiano.jpg',
+        'Typologies/Vegetariano.jpg',
+        'Typologies/Pesce.jpg',
+        'Typologies/Thailandese.jpg',
+        'Typologies/Coreano.jpg',
+        'Typologies/Spagnolo.jpg',
+        'Typologies/Greco.jpg'
     ]
 ];
