@@ -23,21 +23,7 @@ class RestaurantSeeder extends Seeder
             Restaurant::truncate();
         });
 
-        $allRestaurants = [
-            "Pasta La Vista",
-            "Yankee Doodle Diner",
-            "Nacho Nirvana",
-            "Sushi-liscious",
-            "Wok 'n Rollin'",
-            "Curry Comedy Corner",
-            "Veggie Voyage",
-            "Fish 'n Furious",
-            "Pad Thai Party Palace",
-            "Kimchi Carnival Kitchen",
-            "Olè! Omelette",
-            "Mythos Tavern"
-        ];
-
+        $allRestaurants = config('restaurants.allRestaurants');
 
         foreach ($allRestaurants as $key => $singleRestaurant) {
 
@@ -59,11 +45,11 @@ class RestaurantSeeder extends Seeder
             };
 
             $restaurant = Restaurant::create([
-                'company_name' => $singleRestaurant,
-                'slug' => str()->slug($singleRestaurant),
+                'company_name' => $singleRestaurant['name'],
+                'slug' => str()->slug($singleRestaurant['name']),
                 'address' => fake()->address(),
                 'vat_number' => $vat,
-                'img' => 'img',
+                'img' => $singleRestaurant['img'],
                 'visible' => fake()->boolean(),
                 'user_id' => $randomUserId
             ]);

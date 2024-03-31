@@ -3,6 +3,7 @@
 @section('page-title', 'Home')
 
 @section('main-content')
+
     <section class="dashboard">
         <div class="img-container">
             
@@ -65,4 +66,11 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageUrl = "{{ asset('storage/images/') }}" + "/{{ $restaurant->img }}";
+            document.querySelector('.img-container').style.backgroundImage = `url('${imageUrl}')`;
+        });
+    </script>
 @endsection

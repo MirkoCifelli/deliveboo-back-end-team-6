@@ -1,5 +1,7 @@
 @extends('layouts.guest')
 
+@section('page-title', 'Registration')
+
 @section('main-content')
     <section class="registration">
         <form method="POST" action="{{ route('register') }}">

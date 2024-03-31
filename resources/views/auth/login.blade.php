@@ -1,5 +1,7 @@
 @extends('layouts.guest')
 
+@section('page-title', 'Login')
+
 @section('main-content')
     <section class="login">
         <form method="POST" action="{{ route('login') }}">

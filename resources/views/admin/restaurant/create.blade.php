@@ -48,60 +48,56 @@
                     <form action="{{ route('admin.restaurant.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="mb-3">
-                            <label for="company_name" class="form-label">
+                        <div>
+                            <label for="company_name">
                                 Nome del tuo ristorante <span class="text-danger">*</span>
                             </label>
-                            <input type="text" class="form-control" id="company_name" name="company_name" placeholder="inserisci il nome del tuo ristorante..." maxlength="128" required value="{{ old ('company_name')}}">
+                            <input type="text" id="company_name" name="company_name" placeholder="inserisci il nome del tuo ristorante..." maxlength="128" required value="{{ old ('company_name')}}">
                         </div>
 
-                        <div class="mb-3">
-                            <label for="address" class="form-label">
+                        <div>
+                            <label for="address">
                                 Indirizzo <span class="text-danger">*</span>
                             </label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="inserisci il tuo indirizzo..." maxlength="128" required value="{{ old ('address')}}">
+                            <input type="text" id="address" name="address" placeholder="inserisci il tuo indirizzo..." maxlength="128" required value="{{ old ('address')}}">
                         </div>
 
-                        <div class="mb-3">
-                            <label for="vat_number" class="form-label">
+                        <div>
+                            <label for="vat_number">
                                 Partita IVA
                             </label>
-                            <input type="text" class="form-control" id="vat_number" name="vat_number" placeholder="inserisci la tua partita iva..." maxlength="11" value="{{ old ('vat_number')}}">
+                            <input type="text" id="vat_number" name="vat_number" placeholder="inserisci la tua partita iva..." maxlength="11" value="{{ old ('vat_number')}}">
                         </div>
 
-                        <div class="mb-3">
-                            <label for="img" class="form-label">
+                        <div>
+                            <label for="img">
                                 Immagine Ristorante
                             </label>
-                            <input class="form-control" type="file" id="img" name="img">
+                            <input type="file" id="img" name="img">
                         </div>
 
-                        <div class="mb-3">
-                            <label for="typology_id" class="form-label">Typology</label>
-                            @foreach ($typologies as $typology)
-                                <div class="form-check form-check-inline">
+                        <div>
+                            <label for="typology_id">Typology</label>
+                            <div class="checkboxes">
+                                @foreach ($typologies as $typology)
+                                    <label class="check-label" for="typology-{{ $typology->id }}">{{ $typology->name }}</label> 
                                     <input
                                         @if (old('typology') != null && in_array($typology->id, old('typologies')))
                                             checked
                                         @endif
-                                        class="form-check-input"
                                         type="checkbox"
                                         id="typology-{{ $typology->id }}"
                                         name="typologies[]"
                                         value="{{ $typology->id }}">
-                                    <label class="form-check-label" for="typology-{{ $typology->id }}">{{ $typology->name }}</label>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
 
                         <div>
-                            <button type="submit" class="btn btn-dark w-100">
+                            <button type="submit">
                                 Aggiungi il mio ristorante
                             </button>
                         </div>
-
-
-
                     </form>
                 </div>
             </main>
