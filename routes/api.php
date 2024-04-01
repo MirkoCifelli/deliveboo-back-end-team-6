@@ -30,7 +30,10 @@ Route::name('api.')->group(function(){
         'index',
         'show'
     ]);
+
     Route::resource('typology', TypologyController::class)->only([
         'index'
     ]);
+
+    Route::post('/orders', [ContactController::class, 'store'])->name('orders.store');
 });
