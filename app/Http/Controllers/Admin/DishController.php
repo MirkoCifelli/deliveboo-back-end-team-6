@@ -95,7 +95,7 @@ class DishController extends Controller
             return view('admin.dishes.show', compact('dish'));
         }
         else{
-            return back()->withErrors('piatto non trovato');
+            return back()->withErrors('Piatto non trovato');
         }
     }
 
@@ -112,7 +112,7 @@ class DishController extends Controller
             return view('admin.dishes.edit', compact('dish'));
         }
         else{
-            return back()->withErrors('piatto non trovato');
+            return back()->withErrors('Piatto non trovato');
         }
     }
 
