@@ -53,7 +53,7 @@ return [
             ],
             [
                 'name' => 'Southern Fried Chicken Supreme',
-                'img' => 'Ristorante-2/fried-chicken.jpg',
+                'img' => 'Ristorante-2/fried_chicken.jpg',
                 'description' => 'Cosce di pollo marinato in spezie, impanate e fritte fino a diventare croccanti, servite con salsa di miele piccante e purea di patate.',
                 'price' => 18.95,
                 'visible' => true,
@@ -69,7 +69,7 @@ return [
             ],
             [
                 'name' => 'California Cobb Salad Celebration',
-                'img' => 'Ristorante-2/cobb-salad.jpg',
+                'img' => 'Ristorante-2/cobb_salad.jpg',
                 'description' => 'Insalata mista croccante con pollo alla griglia, bacon croccante, uova sode, avocado a fette, pomodori ciliegini e formaggio blu, condita con una vinaigrette balsamica.',
                 'price' => 15.75,
                 'visible' => true,
