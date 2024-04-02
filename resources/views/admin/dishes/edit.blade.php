@@ -10,6 +10,11 @@
             <h1>
                 Modifica del piatto
             </h1>
+            @foreach ($errors->all() as $error)
+                <div class="error">
+                    {{ $error }}
+                </div>
+            @endforeach
         </div>
 
         <div class="div-edit">

@@ -29,7 +29,7 @@ class UpdateDishRequest extends FormRequest
             'slug'=> 'nullable|max:120',
             'img' => 'nullable|max:1024',
             'description' => 'required|max:4024', // CONTROLLA SE FUNZIONA SENNO MODIFICA DISH TABLE 
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|min:0',
             'visible' => 'nullable|boolean',
             'delete_img' => 'nullable|boolean',
         ];
@@ -41,6 +41,7 @@ class UpdateDishRequest extends FormRequest
             'name.required' => 'Inserisci il nome del tuo piatto',
             'description.required' => 'Inserisce la descrizione del tuo piatto',
             'price.required' => 'Inserisci il prezzo del tuo piatto',
+            'price.min' => 'Inserisci un prezzo valido al tuo piatto',
             'delete_img.boolean' => 'Inserisci valore valido'
         ];
     }

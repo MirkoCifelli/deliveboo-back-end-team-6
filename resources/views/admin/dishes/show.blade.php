@@ -8,6 +8,13 @@
         <div class="col d-flex justify-content-center">
             <div class="my-card">
                 <div class="my-card-body">
+
+                    @foreach ($errors->all() as $error)
+                        <div class="error">
+                            {{ $error }}
+                        </div>
+                    @endforeach
+
                     <h1 class="text-center mb-5">
                         {{ $dish->name }}
                     </h1>

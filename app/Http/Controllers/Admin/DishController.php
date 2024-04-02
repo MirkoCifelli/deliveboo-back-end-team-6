@@ -87,8 +87,16 @@ class DishController extends Controller
      */
     public function show(string $slug)
     {
+        $user = Auth::user();
+        $restaurant = $user->restaurant;
         $dish = Dish::where('slug', $slug)->firstOrFail();
-        return view('admin.dishes.show', compact('dish'));
+        
+        if($dish->restaurant_id == $restaurant->id){
+            return view('admin.dishes.show', compact('dish'));
+        }
+        else{
+            return back()->withErrors('piatto non trovato');
+        }
     }
 
     /**
@@ -96,8 +104,16 @@ class DishController extends Controller
      */
     public function edit(string $slug)
     {
+        $user = Auth::user();
+        $restaurant = $user->restaurant;
         $dish = Dish::where('slug', $slug)->firstOrFail();
-        return view('admin.dishes.edit', compact('dish'));
+
+        if($dish->restaurant_id == $restaurant->id){
+            return view('admin.dishes.edit', compact('dish'));
+        }
+        else{
+            return back()->withErrors('piatto non trovato');
+        }
     }
 
     /**
