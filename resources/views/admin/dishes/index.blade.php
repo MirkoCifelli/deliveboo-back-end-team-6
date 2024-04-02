@@ -73,14 +73,14 @@
                                 </button>
                             </div>
                             <div>
-                                <button class="button">
+                                <button class="button edit">
                                     <a href="{{ route('admin.dishes.edit', ['dish' => $Singledish->slug]) }}">
                                         Edit
                                     </a>
                                 </button>
                             </div>
                             <div>
-                                <button class="button">
+                                <button class="button delete">
                                     Delete
                                 </button>
                             </div>

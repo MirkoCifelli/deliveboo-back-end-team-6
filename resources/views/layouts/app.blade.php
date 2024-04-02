@@ -14,7 +14,11 @@
         <header>
             <div class="myContainer">
 
-                <div class="row justify-content-end g-0">
+                <div class="row justify-content-between  g-0">
+
+                    <div class="logo-container">
+                        <img src="{{ asset('storage/images/Logo/logo-back-end.png') }}">
+                    </div>
 
                     <form class="col-auto p-0 text-center" method="POST" action="{{ route('logout') }}">
                         @csrf

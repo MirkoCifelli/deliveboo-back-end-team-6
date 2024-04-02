@@ -88,8 +88,20 @@
         &:hover {
             background-color: black;
         }
+        &.edit {
+            background-color: #d0aa62;
+            &:hover {
+                background-color: black;
+            }
+        }
+        &.delete {
+            background-color: #a63737;
+            &:hover {
+                background-color: black;
+            }
+        }
         &.add {
-            background-color: #c5c5c5;
+            background-color: #7eb27b;
             &:hover {
                 transform: scale(1.1);
                 background-color: black;
