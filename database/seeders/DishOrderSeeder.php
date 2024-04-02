@@ -10,10 +10,6 @@ use App\Models\Restaurant;
 // Helpers
 use Illuminate\Support\Facades\Schema;
 
-use Illuminate\Support\Facades\DB;
-
-
-
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -29,7 +25,8 @@ class DishOrderSeeder extends Seeder
         $orders = Order::all();
 
         // Associare casualmente i piatti di ciascun ristorante agli ordini
-            $orders->each(function ($order) {
+        $orders->each(function ($order) {
+
             // Scegliere casualmente un ristorante
             $restaurant = Restaurant::inRandomOrder()->first();
 
@@ -38,7 +35,9 @@ class DishOrderSeeder extends Seeder
 
             // Associare i piatti selezionati all'ordine
             $dishes->each(function ($dish) use ($order) {
+
                 $existingPivot = $order->dishes()->where('dish_id', $dish->id)->first();
+                
                 if ($existingPivot) {
                     // Se il piatto è già presente nell'ordine, aumentare la quantità
                     $existingPivot->pivot->increment('quantity');
