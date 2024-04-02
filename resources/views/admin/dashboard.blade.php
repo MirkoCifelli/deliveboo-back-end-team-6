@@ -6,13 +6,13 @@
 
     <section class="dashboard">
         <div class="img-container">
-            
+
             <h1>
                 {{ $restaurant->company_name }}
             </h1>
         </div>
 
-        <div  class="row g-0">
+        <div class="row g-0">
             <div class="col-6">
                 <ul class="restaurant-info">
                     <li>
@@ -21,7 +21,7 @@
                             Proprietario:
                         </span>
                         <span>
-                            {{$restaurant->user->name}}
+                            {{ $restaurant->user->name }}
                         </span>
                     </li>
                     <li>
@@ -29,7 +29,7 @@
                             Email del proprietario:
                         </span>
                         <span>
-                            {{$restaurant->user->email}}
+                            {{ $restaurant->user->email }}
                         </span>
                     </li>
                     <li>
@@ -37,7 +37,7 @@
                             Indirizzo:
                         </span>
                         <span>
-                            {{$restaurant->address}}
+                            {{ $restaurant->address }}
                         </span>
                     </li>
                     <li>
@@ -45,7 +45,7 @@
                             Partita IVA:
                         </span>
                         <span>
-                            {{$restaurant->vat_number}}
+                            {{ $restaurant->vat_number }}
                         </span>
                     </li>
                 </ul>
@@ -58,7 +58,7 @@
                     @foreach ($dishes as $singleDish)
                         <div class="dish">
                             <span>
-                                {{$singleDish->name}}
+                                {{ $singleDish->name }}
                             </span>
                         </div>
                     @endforeach
@@ -68,8 +68,13 @@
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const imageUrl = "{{ asset('storage/images/') }}" + "/{{ $restaurant->img }}";
+        document.addEventListener('DOMContentLoaded', function() {
+            @if ($restaurant->img != null)
+                const imageUrl = "{{ asset('storage/images/') }}" + "/{{ $restaurant->img }}";
+            @else
+                const imageUrl = "{{ asset('storage/images/Logo/img-not-found.png') }}";
+            @endif
+
             document.querySelector('.img-container').style.backgroundImage = `url('${imageUrl}')`;
         });
     </script>
