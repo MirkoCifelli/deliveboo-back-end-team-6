@@ -421,7 +421,7 @@ return [
             ],
             [
                 'name' => 'Gazpacho Gustoso',
-                'img' => 'Ristorante-11/gazpagho.jpg',
+                'img' => 'Ristorante-11/gazpacho.jpg',
                 'description' => "Zuppa fredda di pomodoro, peperoni, cetrioli, cipolle e aglio, condita con olio d'oliva e aceto di sherry, servita con crostini all'aglio.",
                 'price' => 18.50,
                 'visible' => true,

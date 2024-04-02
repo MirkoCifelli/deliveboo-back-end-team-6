@@ -26,7 +26,9 @@ class DishController extends Controller
         $user = Auth::user();
 
         $restaurant = $user->restaurant;
-        $dishes = Dish::where('restaurant_id',$restaurant->id)->get();
+        $dishes = Dish::where('restaurant_id',$restaurant->id)
+                    ->orderBy('name')
+                    ->get();
         // $dishes = $user->restaurant->dishes; DA PROVARE 
 
         return view('admin.dishes.index', compact('dishes','restaurant'));
