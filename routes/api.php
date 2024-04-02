@@ -2,6 +2,7 @@
 // Controllers
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypologyController;
+use App\Http\Controllers\Api\OrderController;
 
 // Models
 use App\Models\Restaurant;
@@ -35,5 +36,5 @@ Route::name('api.')->group(function(){
         'index'
     ]);
 
-    Route::post('/orders', [ContactController::class, 'store'])->name('orders.store');
+    Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 });
