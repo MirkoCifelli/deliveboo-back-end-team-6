@@ -25,9 +25,17 @@
             @foreach ($dishes as $Singledish) 
                 <div class="mycontainermenu">
                     <div class="cardmenu">
+                        
                         <div class="container_card_img">
-                            <img src="{{ asset('storage/'.$Singledish->img) }}">
+                            @if ($Singledish->img != null)
+                                <img src="{{ asset('storage/'.$Singledish->img) }}">
+                                
+                            @else
+                                <img src="{{ asset('storage/images/Logo/img-not-found.png') }}">
+                            @endif
                         </div>
+                        
+                        
                         <div class="container_card_content">
                             <ul>
                                 <li>
