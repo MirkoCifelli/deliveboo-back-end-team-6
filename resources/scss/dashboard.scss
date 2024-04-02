@@ -1,5 +1,6 @@
 .dashboard{
 
+    height: 100%;
     .img-container{
 
         height: 150px;
@@ -24,14 +25,18 @@
     }
 
     .row{
-
-        .col-6{            
+        
+        height: calc(100% - 150px);
+        .col-6{       
+            height: 100%;
             padding: 20px;
             .restaurant-info{
+                height: 200px;
                 list-style: none;
                 background-color: rgb(245, 245, 245);
                 padding: 20px;
                 margin-bottom: 40px;
+                flex-grow: 1;
                 >*{
 
                     margin-bottom: 10px;
@@ -49,10 +54,11 @@
             }
 
             .restaurant-menu{
-                
                 display: flex;
+                height: calc(100% - 280px);
+                max-height: 350px;
                 flex-wrap: wrap;
-                overflow-y: auto;
+                overflow: auto;
                 .dish{
 
                     text-align: center;
