@@ -39,6 +39,6 @@ class Restaurant extends Model
     // One-to-Many con Restaurant
     public function dishes()
     {
-        return $this->belongsTo(Dish::class);
+        return $this->hasMany(Dish::class);
     }
 }
