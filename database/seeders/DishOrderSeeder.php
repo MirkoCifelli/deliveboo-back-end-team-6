@@ -27,9 +27,9 @@ class DishOrderSeeder extends Seeder
         // Schema::withoutForeignKeyConstraints(function () {
         // });
 
-          $allOrders = Order::all();
-          $allDishes = Dish::all();
-          $allRestaurants = Restaurant::all();
+        //   $allOrders = Order::all();
+        //   $allDishes = Dish::all();
+        //   $allRestaurants = Restaurant::all();
 
         // $RestaurantsId = [];
         // foreach ($allRestaurants as $key => $singleRestaurant) {
@@ -59,11 +59,48 @@ class DishOrderSeeder extends Seeder
         //     ]);
 
         // }
+        // Ottenere tutti gli ID dei piatti
+        $dishIds = Dish::pluck('id')->toArray();
 
-        $orders = Order::all();
-        $dishesIds = Dish::pluck('id')->toArray();
-        foreach ($orders as $order) {
-            $order->dishes()->sync(fake()->randomElements($dishesIds,fake()->numberBetween(1, 3)));
-        }
-    }
+        // Ottenere tutti gli ID degli ordini
+        $orderIds = Order::pluck('id')->toArray();
+
+        // Generare un numero casuale di piatti e ordini da associare
+        $numDishes = count($dishIds);
+        $numOrders = count($orderIds);
+
+        // Definire la quantità massima e minima per ciascun piatto nell'ordine
+        $minQuantity = 1;
+        $maxQuantity = 5;
+
+        foreach ($orderIds as $orderId) {
+            // Ottenere l'ID del ristorante associato all'ordine corrente
+            $restaurantId = Order::find($orderId)->restaurant_id;
+        
+            // Ottenere gli ID dei piatti appartenenti al ristorante dell'ordine corrente
+            $restaurantDishIds = Dish::where('restaurant_id', $restaurantId)->pluck('id')->toArray();
+        
+            // Verificare se ci sono piatti disponibili per il ristorante corrente
+            if (!empty($restaurantDishIds)) {
+                // Scegliere casualmente un piatto dal ristorante corrente
+                $randomDishId = $restaurantDishIds[array_rand($restaurantDishIds)];
+        
+                // Generare una quantità casuale tra $minQuantity e $maxQuantity
+                $quantity = rand($minQuantity, $maxQuantity);
+        
+                // Salvare l'associazione nella tabella pivot
+                DB::table('dish_order')->insert([
+                    'dish_id' => $randomDishId,
+                    'order_id' => $orderId,
+                    'quantity' => $quantity,
+                ]);
+            } else {
+                // Gestire il caso in cui non ci sono piatti disponibili per il ristorante corrente
+                // Ad esempio, puoi semplicemente ignorare questo ordine o gestire l'errore in modo appropriato.
+                // Qui puoi aggiungere il codice per gestire questa situazione.
+                continue; // Salta questo ordine e passa al successivo
+            }
+        }            
+    }    
 }
+
