@@ -31,7 +31,7 @@ class Dish extends Model
     // One to Many with resturants
     public function restaurants()
     {
-        return $this->hasMany(Restaurant::class);
+        return $this->belongsTo(Restaurant::class);
     }
 
     // Many to Many with orders
