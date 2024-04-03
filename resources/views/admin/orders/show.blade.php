@@ -30,11 +30,30 @@
                         <p class="mb-3">
                             Effettuato il: {{ $order->created_at }}
                         </p>
+                        <div>
+                            <ul>
+                                @foreach ($order->dishes as $key => $singleDish)
+                                    <li>
+                                        <span>
+                                            @dd($singleDish->pivot)
+                                        </span>
+
+                                        <span>
+                                            {{$singleDish->name}}
+                                        </span>
+
+                                        <span>
+                                            {{$singleDish->price . '€'}}
+                                        </span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
 
                         <div class="info">
                             Prezzo:
                             <span>
-                                {{ $order->customer_total_price . '$' }}
+                                {{ $order->customer_total_price . '€' }}
                             </span>
                         </div>
 
