@@ -31,7 +31,7 @@
                 <label for="password">
                     Password
                 </label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" minlength="8">
 
                 @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}">

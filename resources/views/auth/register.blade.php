@@ -39,7 +39,7 @@
                 <label for="password">
                     Password
                 </label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required minlength="8">
             </div>
 
             <!-- Confirm Password -->
@@ -47,7 +47,7 @@
                 <label for="password_confirmation">
                     Conferma Password
                 </label>
-                <input type="password" id="password_confirmation" name="password_confirmation">
+                <input type="password" id="password_confirmation" name="password_confirmation" required minlength="8">
             </div>
 
             <div>
