@@ -20,7 +20,22 @@
             }
 
             div {
-                
+                ul{
+                    
+                    padding: 0;
+                    list-style: none;
+                    li{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        background-color: rgb(237, 237, 237);
+                        padding: 8px 15px; 
+                        span{
+
+                        }
+                    }
+                    
+                }
             }
 
             .info {
