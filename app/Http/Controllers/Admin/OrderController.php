@@ -28,7 +28,7 @@ class OrderController extends Controller
         $user = Auth::user();
         $restaurant = $user->restaurant;
         $dishes = $restaurant->dishes;
-        $orders = null;
+        $orders = [];
 
         for ($i=0; $i < count($dishes); $i++) {
             

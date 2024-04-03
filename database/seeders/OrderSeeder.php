@@ -47,7 +47,7 @@ class OrderSeeder extends Seeder
                 'customer_address' => fake()->address(),
                 'customer_phone' => fake()->phoneNumber(),
                 'customer_email' => $initDomain[0] . '@' . $endDomain,
-                'customer_total_price' => fake()->randomFloat(2, 0, 1000),
+                'customer_total_price' => 0,
                 'created_at' => fake()->dateTimeBetween('-4 year', 'now')->format('Y-m-d H:i:s'),
             ]);
         }

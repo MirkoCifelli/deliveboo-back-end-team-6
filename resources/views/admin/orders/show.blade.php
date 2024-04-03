@@ -35,13 +35,11 @@
                                 @foreach ($order->dishes as $key => $singleDish)
                                     <li>
                                         <span>
-                                            {{ 'x'.$singleDish->pivot->quantity}}
+                                            {{ $singleDish->pivot->quantity}}
                                         </span>
-
                                         <span>
                                             {{$singleDish->name}}
                                         </span>
-
                                         <span>
                                             {{$singleDish->price . '€'}}
                                         </span>

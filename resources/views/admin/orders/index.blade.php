@@ -31,7 +31,7 @@
                             </li>
                             <li> 
                                 <span class="price">
-                                    {{$singleOrder->customer_total_price . '$'}}
+                                    {{$singleOrder->customer_total_price . '€'}}
                                 </span>
                             </li>
                         </ul> 
