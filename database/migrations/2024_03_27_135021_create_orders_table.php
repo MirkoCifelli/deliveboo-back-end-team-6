@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('customer_lastname', 128);
             $table->string('customer_address', 128);
             $table->string('customer_phone', 20);
-            $table->string('customer_email')->unique();
+            $table->string('customer_email');
             $table->double('customer_total_price', 6,2);
             $table->timestamps();
         });

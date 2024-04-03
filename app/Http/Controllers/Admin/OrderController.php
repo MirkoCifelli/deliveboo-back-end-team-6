@@ -27,36 +27,18 @@ class OrderController extends Controller
     {
         $user = Auth::user();
         $restaurant = $user->restaurant;
-        $orders = $restaurant->orders; // <-- soluzione corretta
+        $dishes = $restaurant->dishes;
+        $orders = [];
 
-        // ---------------------------------------------------------------------------------------------
-
-        /*
-            Prendiamo tutti i piatti del ristorante
-        */
-        // // $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
-
-        /*
-            Inizzializziamo una variabile che rappresenta tutti gli ordini del singolo ristorante
-        */
-        // // $allRestaurantOrders = [];
-
-        /*
-            Ad ogni iterazione del ciclo for, ciclo su tutti gli ordini DI OGNI SINGOLO DISH
-
-            e lo inserisco all'interno di $allRestaurantOrders
-        */
-        // // for ($i=0; $i < count($dishes) ; $i++) { 
-
-        // //     foreach ($dishes[$i]->orders as $key => $singleOrder) {
-                
-        // //         array_push($allRestaurantOrders, $singleOrder);
-        // //     }
-        // // };
-
+        for ($i=0; $i < count($dishes); $i++) {
+            
+            if (count($dishes[$i]->orders) > 0) {
+                array_push($orders, $dishes[$i]->orders);
+            }
+        }
+        
 
         return view('admin.orders.index', compact('orders'));
-
     }
 
         /**
