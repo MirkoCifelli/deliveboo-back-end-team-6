@@ -33,7 +33,10 @@ Route::prefix('admin')
         'create',
         'store'
     ]);
-    Route::resource('orders', AdminOrderController::class);
+    Route::resource('orders', AdminOrderController::class)->only([
+        'index',
+        'show'
+    ]);;
     Route::resource('dishes', AdminDishController::class);
 });
 
