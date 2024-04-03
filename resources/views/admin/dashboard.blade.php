@@ -16,7 +16,6 @@
             <div class="col-6">
                 <ul class="restaurant-info">
                     <li>
-
                         <span>
                             Proprietario:
                         </span>

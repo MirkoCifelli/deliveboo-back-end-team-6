@@ -47,26 +47,11 @@
                     width: 50%;
                     ul {
                         padding: 0;
-                        li {
-                            h2 {
-                            }
-
-                            p {
-                            }
-
-                            h5 {
-                            }
-
-                            h6 {
-                            }
-                        }
                     }
                 }
 
                 .button_container {
                     width: auto;
-                    div {
-                    }
                 }
             }
         }
@@ -87,15 +72,21 @@
         cursor: pointer;
         &:hover {
             background-color: black;
+            &:hover {
+                background-color: black;
+            }
+        }
+        &.show{
+            background-color: #0B5ED7;
         }
         &.edit {
-            background-color: #d0aa62;
+            background-color: #FFC107;
             &:hover {
                 background-color: black;
             }
         }
         &.delete {
-            background-color: #a63737;
+            background-color: #DC3545;
             &:hover {
                 background-color: black;
             }
@@ -110,8 +101,6 @@
         a {
             text-decoration: none;
             color: white;
-        }
-        a {
         }
     }
 

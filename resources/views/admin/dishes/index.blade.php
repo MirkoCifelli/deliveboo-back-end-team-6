@@ -66,7 +66,7 @@
                         </div>
                         <div class="button_container">
                             <div>
-                                <button class="button">
+                                <button class="button show">
                                     <a href="{{ route('admin.dishes.show', ['dish' => $Singledish->slug]) }}">
                                         Show
                                     </a>
