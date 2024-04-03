@@ -24,8 +24,8 @@ class OrderSeeder extends Seeder
         });
 
         $restaurantId = null;
-        
-        $domain=[
+
+        $domain = [
             'gmail.com',
             'gmail.it',
             'hotmail.com',
@@ -34,35 +34,22 @@ class OrderSeeder extends Seeder
             'aruba.it'
         ];
 
-        $years = [
-            '2020',
-            '2021',
-            '2022',
-            '2023',
-        ];
+        for ($i = 0; $i < 1000; $i++) {
 
-        for ($i=0; $i < 10; $i++) { 
-
-            // Per random email
-            $randomIndexEmail = random_int(0,5);
-            $initDomain = explode('@',fake()->email());
+            $randomIndexEmail = random_int(0, 5);
+            $initDomain = explode('@', fake()->email());
             $endDomain = $domain[$randomIndexEmail];
 
-            // Per creare annata che vogliamo
-            $date = fake()->dateTime();
-            $randomIndexDate = random_int(0,3);
-            $newDate = DateTime::createFromFormat('Y-m-d H:i:s', $years[$randomIndexDate] . $date->format('-m-d H:i:s'));
 
             $order = Order::create([
                 'customer_name' => fake()->firstName(),
                 'customer_lastname' => fake()->lastName(),
                 'customer_address' => fake()->address(),
                 'customer_phone' => fake()->phoneNumber(),
-                'customer_email' => $initDomain[0].'@'.$endDomain,
+                'customer_email' => $initDomain[0] . '@' . $endDomain,
                 'customer_total_price' => fake()->randomFloat(2, 0, 1000),
-                'created_at' => $newDate,
+                'created_at' => fake()->dateTimeBetween('-4 year', 'now')->format('Y-m-d H:i:s'),
             ]);
         }
-
     }
 }
