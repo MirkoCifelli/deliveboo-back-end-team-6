@@ -21,32 +21,21 @@ class DishOrderSeeder extends Seeder
     public function run(): void
     {
         
-        // Creare alcuni ordini
+        $restaurants = Restaurant::all();
+        
         $orders = Order::all();
 
-        // Associare casualmente i piatti di ciascun ristorante agli ordini
-        $orders->each(function ($order) {
+        foreach ($orders as $order){
 
-            // Scegliere casualmente un ristorante
-            $restaurant = Restaurant::inRandomOrder()->first();
+            $restaurant = $restaurants->random();
 
-            // Selezionare alcuni piatti solo da questo ristorante
-            $dishes = $restaurant->dishes()->inRandomOrder()->limit(rand(1, 3))->get();
+            $restaurantDishes = $restaurants->dishes()->inRandomOrder()->take(rand(2, 5))->get();
+            $quantity = rand(1, 5);
+            $order->dishes()->attach($restaurantDishes->pluck('id'), ['quantity' => $quantity]);
 
-            // Associare i piatti selezionati all'ordine
-            $dishes->each(function ($dish) use ($order) {
+        }
 
-                $existingPivot = $order->dishes()->where('dish_id', $dish->id)->first();
-                
-                if ($existingPivot) {
-                    // Se il piatto è già presente nell'ordine, aumentare la quantità
-                    $existingPivot->pivot->increment('quantity');
-                } else {
-                    // Altrimenti, aggiungere il piatto con quantità 1
-                    $order->dishes()->attach($dish->id, ['quantity' => 1]);
-                }
-            });
-        });
+        
                    
     }
 }

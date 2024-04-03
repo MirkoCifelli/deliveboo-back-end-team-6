@@ -52,7 +52,7 @@ class OrderController extends Controller
         $restaurantId = null;
 
         for ($i=0; $i < count($order->dishes); $i++) { 
-            $restaurantId = $order->dishes[$i]->restaurant_id;
+            $restaurantId[] = $order->dishes[$i]->restaurant_id;
         }
 
         if(in_array($restaurant->id, $restaurantId)){
