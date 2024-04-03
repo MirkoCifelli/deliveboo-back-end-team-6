@@ -22,6 +22,16 @@
         </div>
         {{-- @dd($dishes) --}}
         <div class="mycontaineroverflow">
+            @if (session('dishDeleted'))
+            <div class="container alert alert-danger">
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 col-md-6">
+                        {{session('dishDeleted')}}
+                    </div>
+                </div>
+            </div>
+                
+            @endif
             @foreach ($dishes as $Singledish) 
                 <div class="mycontainermenu">
                     <div class="cardmenu">
@@ -34,8 +44,6 @@
                                 <img src="{{ asset('storage/images/Logo/img-not-found.png') }}">
                             @endif
                         </div>
-                        
-                        
                         <div class="container_card_content">
                             <ul>
                                 <li>
@@ -80,9 +88,11 @@
                                 </button>
                             </div>
                             <div>
-                                <button class="button delete">
-                                    Delete
-                                </button>
+                                <form action="{{ route('admin.dishes.destroy', ['dish' => $Singledish->id]) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="button delete" type="submit">Elimina</button>
+                                </form>
                             </div>
                         </div>
                     </div>
