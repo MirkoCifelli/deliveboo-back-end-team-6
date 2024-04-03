@@ -4,6 +4,17 @@
 
 @section('main-content')
     <section class="login">
+
+        @if($errors->any())
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach ( $errors->all() as $error )
+                    <li>{{ $error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
     
@@ -12,7 +23,7 @@
                 <label for="email">
                     Email
                 </label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" value="{{ old ('email') }}">
             </div>
     
             <!-- Password -->

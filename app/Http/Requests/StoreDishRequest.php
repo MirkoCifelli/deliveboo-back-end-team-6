@@ -38,7 +38,7 @@ class StoreDishRequest extends FormRequest
     {
         return [
             'name.required' => 'Inserisci il nome del tuo piatto',
-            'description.required' => 'Inserisce la descrizione del tuo piatto',
+            'description.required' => 'Inserisci la descrizione del tuo piatto',
             'price.required' => 'Inserisci il prezzo del tuo piatto',
             'price.min' => 'Inserisci un prezzo valido al tuo piatto',
         ];
