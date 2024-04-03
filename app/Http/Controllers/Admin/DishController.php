@@ -154,6 +154,21 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
-        //
+        // Assicurati che l'utente sia autenticato
+        if (Auth::check()) {
+            // Ottieni l'utente autenticato
+            $user = Auth::user();
+            // Ottieni il ristorante dell'utente
+            $restaurant = $user->restaurant;
+            // Cerca e elimina il piatto solo se appartiene al ristorante dell'utente
+            if ($dish->restaurant_id === $restaurant->id) {
+                $dish->delete();
+                // Opzionale: se vuoi reindirizzare l'utente dopo la cancellazione
+                return redirect()->route('admin.dishes.index')->with('dishDeleted', 'Il piatto è stato eliminato con successo.');
+            }
+        } else {
+            // Se l'utente non è autenticato, reindirizzalo alla pagina di accesso
+            return redirect()->route('login')->with('error', 'Devi effettuare l\'accesso per eliminare un piatto.');
+        }
     }
 }
