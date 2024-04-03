@@ -11,6 +11,7 @@ import '~resources/scss/DishesIndex.scss';
 import '~resources/scss/guest-layout.scss';
 import '~resources/scss/login-registration.scss';
 import '~resources/scss/ordersIndex.scss';
+import '~resources/scss/orderView.scss';
 
 import * as bootstrap from 'bootstrap';
 

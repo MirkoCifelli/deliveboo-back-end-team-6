@@ -1,17 +1,48 @@
 @extends('layouts.app')
 
-@section('page-title', 'Orders Show')
+@section('page-title', 'Order')
 
 @section('main-content')
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h1 class="text-center text-success">
-                        Sei loggato! Sei su Orders Create
-                    </h1>
+    <section class="order-show">
+        <div class="row g-0">
+            <div class="col d-flex justify-content-center">
+                <div class="my-card">
+                    <div class="my-card-body">
+
+                        @foreach ($errors->all() as $error)
+                            <div class="error">
+                                {{ $error }}
+                            </div>
+                        @endforeach
+
+                        <h1 class="text-center mb-5">
+                            Nome: {{ $order->customer_name }} {{ $order->customer_lastname }}
+                        </h1>
+
+                        <p class="mb-3">
+                            Email: {{ $order->customer_email }}
+                        </p>
+
+                        <p class="mb-3">
+                            Indirizzo: {{ $order->customer_address }}
+                        </p>
+
+                        <p class="mb-3">
+                            Effettuato il: {{ $order->created_at }}
+                        </p>
+
+                        <div class="info">
+                            Prezzo:
+                            <span>
+                                {{ $order->customer_total_price . '$' }}
+                            </span>
+                        </div>
+
+
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 @endsection
