@@ -31,7 +31,7 @@ class Dish extends Model
     */
 
     // One to Many with resturants
-    public function restaurants()
+    public function restaurant()
     {
         return $this->belongsTo(Restaurant::class);
     }
