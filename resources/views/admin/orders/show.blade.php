@@ -35,7 +35,7 @@
                                 @foreach ($order->dishes as $key => $singleDish)
                                     <li>
                                         <span>
-                                            @dd($singleDish->pivot)
+                                            {{ 'x'.$singleDish->pivot->quantity}}
                                         </span>
 
                                         <span>

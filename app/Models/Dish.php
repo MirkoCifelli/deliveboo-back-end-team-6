@@ -38,6 +38,6 @@ class Dish extends Model
 
     // Many to Many with orders
     public function orders(){
-        return $this->belongsToMany(Order::class);
+        return $this->belongsToMany(Order::class)->withPivot('quantity');
     }
 }
