@@ -4,6 +4,17 @@
 
 @section('main-content')
     <section class="registration">
+
+        @if($errors->any())
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach ( $errors->all() as $error )
+                    <li>{{ $error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -12,7 +23,7 @@
                 <label for="name">
                     Name
                 </label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" value="{{ old ('name') }}">
             </div>
 
             <!-- Email Address -->
@@ -20,7 +31,7 @@
                 <label for="email">
                     Email
                 </label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" value="{{ old ('email') }}">
             </div>
 
             <!-- Password -->
@@ -28,7 +39,7 @@
                 <label for="password">
                     Password
                 </label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required minlength="8">
             </div>
 
             <!-- Confirm Password -->
@@ -36,7 +47,7 @@
                 <label for="password_confirmation">
                     Conferma Password
                 </label>
-                <input type="password" id="password_confirmation" name="password_confirmation">
+                <input type="password" id="password_confirmation" name="password_confirmation" required minlength="8">
             </div>
 
             <div>
