@@ -28,12 +28,12 @@ class OrderController extends Controller
         $user = Auth::user();
         $restaurant = $user->restaurant;
         $dishes = $restaurant->dishes;
-        $orders = [];
+        $orders = null;
 
         for ($i=0; $i < count($dishes); $i++) {
             
             if (count($dishes[$i]->orders) > 0) {
-                array_push($orders, $dishes[$i]->orders);
+                $orders = $dishes[$i]->orders;
             }
         }
         

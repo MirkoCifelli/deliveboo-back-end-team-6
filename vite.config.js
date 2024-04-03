@@ -16,6 +16,7 @@ export default defineConfig({
                 'resources/scss/DishesIndex.scss',
                 'resources/scss/guest-layout.scss',
                 'resources/scss/login-registration.scss',
+                'resources/scss/ordersIndex.scss',
                 'resources/js/app.js',
             ],
             refresh: true,
