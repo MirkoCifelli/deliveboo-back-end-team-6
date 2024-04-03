@@ -1,8 +1,10 @@
 .dish-create, .dish-edit {
+    
     padding: 40px;
-    height: 100vh;
+    height: 100%;
+    overflow-y: auto;
     .img-container {
-        height: 15%;
+        height: 25%;
         h1 {
             font-size: 3rem;
             font-weight: 700;
@@ -10,10 +12,6 @@
             margin: 0;
             margin-bottom: 20px;
         }
-    }
-    .div-edit {
-        height: 75%;
-        overflow-y: auto;
     }
     form {
         label {
