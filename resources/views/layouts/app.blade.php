@@ -50,7 +50,7 @@
                             </li>
     
                             <li>
-                                <a href="statics">Statistiche</a>
+                                <a href="{{ route('admin.statistics') }}">Statistiche</a>
                             </li>
                         </ul>
                     </aside>
