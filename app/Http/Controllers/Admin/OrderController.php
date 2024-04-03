@@ -46,8 +46,19 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        return view('admin.orders.show', compact('order'));
+        $user = Auth::user();
+        $restaurant = $user->restaurant;
 
+        $restaurantId = null;
+
+        for ($i=0; $i < count($order->dishes); $i++) { 
+            $restaurantId = $order->dishes[$i]->restaurant_id;
+        }
+
+        if(in_array($restaurant->id, $restaurantId)){
+            
+            return view('admin.orders.show', compact('order'));
+        }
     }
 
 
