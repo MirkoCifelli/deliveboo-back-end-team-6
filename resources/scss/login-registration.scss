@@ -1,5 +1,12 @@
 .login, .registration{
 
+    .error-div{
+        width: 20%;
+        padding: 0;
+        border-radius: 0;
+        border: 1px solid rgb(130, 38, 38);
+    }
+
     form{
 
         min-height: 500px;

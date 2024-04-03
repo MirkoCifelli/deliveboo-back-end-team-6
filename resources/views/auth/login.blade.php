@@ -6,10 +6,10 @@
     <section class="login">
 
         @if($errors->any())
-            <div class="alert alert-danger">
-                <ul class="mb-0">
+            <div class="alert alert-danger error-div">
+                <ul class="mb-0 p-0 d-flex justify-content-center align-items-center">
                     @foreach ( $errors->all() as $error )
-                    <li>{{ $error}}</li>
+                    <li class="p-0">{{ $error}}</li>
                     @endforeach
                 </ul>
             </div>
