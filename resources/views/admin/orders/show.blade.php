@@ -16,7 +16,7 @@
                         @endforeach
 
                         <h1 class="text-center mb-5">
-                            Nome: {{ $order->customer_name }} {{ $order->customer_lastname }}
+                            {{ $order->customer_name }} {{ $order->customer_lastname }}
                         </h1>
 
                         <p class="mb-3">
@@ -41,7 +41,7 @@
                                             {{$singleDish->name}}
                                         </span>
                                         <span>
-                                            {{$singleDish->price . '€'}}
+                                            {{'€ '.$singleDish->price}}
                                         </span>
                                     </li>
                                 @endforeach
@@ -49,13 +49,11 @@
                         </div>
 
                         <div class="info">
-                            Prezzo:
+                            Prezzo totale:
                             <span>
-                                {{ $order->customer_total_price . '€' }}
+                                {{ '€'.$order->customer_total_price }}
                             </span>
                         </div>
-
-
 
                     </div>
                 </div>
