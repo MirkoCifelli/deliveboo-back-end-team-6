@@ -41,6 +41,10 @@ Route::prefix('admin')
     ]);;
     Route::resource('dishes', AdminDishController::class);
     Route::get('/statistics', [AdminStatisticController::class, 'statistics'])->name('statistics');
+    Route::get('/orders-data', 'App\Http\Controllers\Admin\StatisticController@ordersData');
+
+    
+
 
     
 });

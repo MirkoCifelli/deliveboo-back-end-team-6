@@ -34,7 +34,7 @@ class OrderSeeder extends Seeder
             'aruba.it'
         ];
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 50; $i++) {
 
             $randomIndexEmail = random_int(0, 5);
             $initDomain = explode('@', fake()->email());
