@@ -17,6 +17,7 @@ export default defineConfig({
                 'resources/scss/guest-layout.scss',
                 'resources/scss/login-registration.scss',
                 'resources/scss/ordersIndex.scss',
+                'resources/scss/charts.scss',
                 'resources/js/app.js',
             ],
             refresh: true,

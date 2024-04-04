@@ -12,6 +12,7 @@ import '~resources/scss/guest-layout.scss';
 import '~resources/scss/login-registration.scss';
 import '~resources/scss/ordersIndex.scss';
 import '~resources/scss/orderView.scss';
+import '~resources/scss/charts.scss';
 
 import * as bootstrap from 'bootstrap';
 

@@ -3,9 +3,13 @@
 @section('page-title', 'Home')
 
 @section('main-content')
-  <canvas id="monthlyOrderChart" width="500" height="200"></canvas>
+  <section class="charts">
 
-  <canvas id="yearlyOrderChart" width="500" height="200"></canvas>
+    <canvas id="monthlyOrderChart" width="500" height="200"></canvas>
+  
+    <canvas id="yearlyOrderChart" width="500" height="200"></canvas>
+
+  </section>
 
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
