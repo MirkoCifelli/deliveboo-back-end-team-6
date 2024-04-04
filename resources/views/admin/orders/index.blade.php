@@ -21,7 +21,7 @@
                         <ul>
                             <li>
                                 <h2>
-                                    {{ $singleOrder->customer_name }} {{$singleOrder->customer_lastname}}
+                                     {{ $singleOrder->customer_name }} {{$singleOrder->customer_lastname}}
                                 </h2>
                             </li>
                             <li> 

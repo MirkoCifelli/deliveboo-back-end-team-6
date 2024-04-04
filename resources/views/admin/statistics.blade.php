@@ -82,7 +82,7 @@
     fetch('/admin/yearly-orders-data')
       .then(response => response.json())
       .then(data => {
-        // Sovrascrivi i valori dei totali per i mesi con ordini effettivi
+        // Sovrascrivi i valori dei totali per gli anni con ordini effettivi
         data.forEach(item => {
           totalsYear[item.year - 2020] = item.total;
         });

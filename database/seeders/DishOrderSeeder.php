@@ -33,7 +33,7 @@ class DishOrderSeeder extends Seeder
             $restaurant = $restaurants->random();
 
             // prendiamo un numero casuale (1-5) di piatti dal ristorante 
-            $restaurantDishes = $restaurant->dishes()->inRandomOrder()->take(rand(1, 5))->get();
+            $restaurantDishes = $restaurant->dishes()->inRandomOrder()->take(rand(2, 5))->get();
 
             // settiamo una quantità casuale
             $quantity = rand(1, 5);

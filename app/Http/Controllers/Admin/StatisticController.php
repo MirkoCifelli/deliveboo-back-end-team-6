@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Admin;
 // Models
 use App\Models\Order;
 
+
 //support
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 
 use Illuminate\Http\Request;
 
@@ -21,25 +23,33 @@ class StatisticController extends Controller
 
     public function monthlyOrdersData()
     {
-        $monthlyOrders = Order::selectRaw('MONTH(created_at) as month, COUNT(*) as total')
-                      ->groupBy('month')
-                      ->get();
+        $user = Auth::user();
+        $restaurant = $user->restaurant;
+        $restaurantId = $restaurant->id;
+
+        //$restaurantId = 2; // Puoi sostituire questo con la variabile corretta
+
+        $monthlyOrders = Order::selectRaw('MONTH(orders.created_at) AS month, COUNT(DISTINCT orders.id) AS total')
+            ->join('dish_order', 'orders.id', '=', 'dish_order.order_id')
+            ->join('dishes', 'dish_order.dish_id', '=', 'dishes.id')
+            ->where('dishes.restaurant_id', $restaurantId)
+            ->groupByRaw('MONTH(orders.created_at)')
+            ->get(); 
 
         return response()->json($monthlyOrders);
-
-        // $orders = DB::table(DB::raw("(SELECT 1 as month UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 UNION SELECT 10 UNION SELECT 11 UNION SELECT 12) as months"))
-        // ->leftJoin(DB::raw("(SELECT MONTH(created_at) as month, COUNT(id) as total FROM orders GROUP BY month) as order_counts"), 'months.month', '=', 'order_counts.month')
-        // ->select('months.month', DB::raw('COALESCE(order_counts.total, 0) as total'))
-        // ->orderBy('months.month')
-        // ->get();
-                
-        //return response()->json($orders);
-
     }
 
     public function yearlyOrdersData() {
-        $yearlyOrders = Order::selectRaw('YEAR(created_at) as year, COUNT(*) as total')
-        ->groupBy('year')
+
+        $user = Auth::user();
+        $restaurant = $user->restaurant;
+        $restaurantId = $restaurant->id;
+
+        $yearlyOrders = Order::selectRaw('YEAR(orders.created_at) AS year, COUNT(DISTINCT orders.id) AS total')
+        ->join('dish_order', 'orders.id', '=', 'dish_order.order_id')
+        ->join('dishes', 'dish_order.dish_id', '=', 'dishes.id')
+        ->where('dishes.restaurant_id', $restaurantId)
+        ->groupByRaw('YEAR(orders.created_at)')
         ->get();
 
         return response()->json($yearlyOrders);

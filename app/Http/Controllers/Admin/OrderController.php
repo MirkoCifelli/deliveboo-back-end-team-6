@@ -27,15 +27,22 @@ class OrderController extends Controller
     {
         $user = Auth::user();
         $restaurant = $user->restaurant;
+
         $dishes = $restaurant->dishes;
         $orders = [];
 
-        for ($i=0; $i < count($dishes); $i++) {
-            
-            if (count($dishes[$i]->orders) > 0) {
-                $orders = $dishes[$i]->orders;
+        foreach ($dishes as $dish) {
+
+            foreach ($dish->orders as  $order) {
+
+                if (!isset($orders[$order->id])) {
+                    
+                    $orders[$order->id] = $order;
+                }
+
             }
         }
+
         
 
         return view('admin.orders.index', compact('orders'));
