@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController
 use App\Http\Controllers\Admin\TypologyController as AdminTypologyController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController; 
 use App\Http\Controllers\Admin\DishController as AdminDishController;
+use App\Http\Controllers\Admin\StatisticController as AdminStatisticController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +40,10 @@ Route::prefix('admin')
         'show'
     ]);;
     Route::resource('dishes', AdminDishController::class);
+    Route::get('/statistics', [AdminStatisticController::class, 'statistics'])->name('statistics');
+    Route::get('/monthly-orders-data', 'App\Http\Controllers\Admin\StatisticController@monthlyOrdersData');
+    Route::get('/yearly-orders-data', 'App\Http\Controllers\Admin\StatisticController@yearlyOrdersData');
 });
+
 
 require __DIR__.'/auth.php';
