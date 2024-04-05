@@ -1,4 +1,6 @@
 .menu {
+    position: relative;
+
     .container_top {
         display: flex;
         flex-direction: row;
@@ -110,4 +112,46 @@
             color: grey;
         }
     }
+
+    /* Stili per la modale */
+    .modaleMy {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.399);
+      }
+  
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        text-align: center;
+      }
+  
+      .btn-container {
+        margin-top: 20px;
+      }
+  
+      .btn {
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+  
+      .confirm-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+      }
+  
+      .cancel-btn {
+        background-color: #f44336;
+        color: white;
+        border: none;
+      }
 }

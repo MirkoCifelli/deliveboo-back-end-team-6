@@ -4,6 +4,27 @@
 
 @section('main-content')
     <section class="menu">
+        <div class="modaleMio modaleMy d-none">
+            <div class="modal-content">
+                <p>
+                    Sei sicuro di voler cancellare?
+                </p>
+                <div class="btn-container">
+                    <div>
+                        {{-- <form action="{{ route('admin.dishes.destroy', ['dish' => $Singledish->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="button delete" type="submit">Elimina</button>
+                        </form>  --}}
+                    </div>
+                    <div>
+                        <button class="btn cancel-btn" id="cancelDelete">
+                            Annulla
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> 
         <div class="img-container">
             <div class="container_top">
                 <div>
@@ -32,7 +53,7 @@
             </div>
                 
             @endif
-            @foreach ($dishes as $Singledish) 
+            @foreach ($dishes as $key => $Singledish) 
                 <div class="mycontainermenu">
                     <div class="cardmenu">
                         
@@ -88,11 +109,9 @@
                                 </button>
                             </div>
                             <div>
-                                <form action="{{ route('admin.dishes.destroy', ['dish' => $Singledish->id]) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="button delete" type="submit">Elimina</button>
-                                </form>
+                                <button class="my-delete button delete">
+                                    Delete
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -100,4 +119,26 @@
             @endforeach
         </div>
     </section>
+
+    <script>
+
+        let deleteButton = document.querySelectorAll(".my-delete");
+
+        let flag = false;
+
+        deleteButton.forEach(singleButton => {
+            singleButton.addEventListener("click", function() {
+                flag = !flag;
+                console.log(flag);
+
+                if (flag == true) {
+                    document.querySelector(".modaleMio").classList.remove('d-none');
+                }
+                else {
+                    document.querySelector(".modaleMio").classList.add('d-none');
+                }
+            }); 
+        });
+
+    </script>
 @endsection
