@@ -74,13 +74,13 @@
                             name="price" placeholder="Inserisci il prezzo del piatto"
                             value="{{ old('price', $dish->price) }}" required>
 
-                            <div class="error validation d-none">
+                            <div class="warning error validation d-none">
                                 <span>
                                     Inserisci un valore valido
                                 </span>
                             </div>
                         @error('price')
-                            <div class="error">
+                            <div class="warning error">
                                 {{ $message }}
                             </div>
                         @enderror
@@ -108,7 +108,6 @@
     <script>
         
         let min_prize = document.getElementById("price");
-
         let warning = document.querySelector(".validation");
 
         min_prize.addEventListener("input", function(){ 

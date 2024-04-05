@@ -6,7 +6,7 @@
     <section class="registration">
 
         @if($errors->any())
-            <div class="alert alert-danger error-div">
+            <div class="warning error">
                 <ul class="mb-0 p-0 d-flex justify-content-center align-items-center">
                     @foreach ( $errors->all() as $error )
                     <li class="p-0">{{ $error}}</li>
@@ -42,6 +42,12 @@
                 <input type="password" id="password" name="password" required minlength="8">
             </div>
 
+            <div class="warning validation d-none">
+                <span>
+                    Inserisci almeno 8 caratteri
+                </span>
+            </div>
+
             <!-- Confirm Password -->
             <div class="mt-4">
                 <label for="password_confirmation">
@@ -61,4 +67,22 @@
             </button>
         </form>
     </section>
+
+    <script>
+        
+        let min_letters = document.getElementById("password");
+
+        let warning = document.querySelector(".validation");
+
+        min_letters.addEventListener("input", function(){ 
+
+            if( min_letters.value.length < 8){
+                warning.classList.remove('d-none');
+            }
+            else{
+                warning.classList.add('d-none');
+            }
+        });
+
+    </script>
 @endsection

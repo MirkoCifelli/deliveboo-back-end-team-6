@@ -29,19 +29,18 @@ class OrderController extends Controller
         $restaurant = $user->restaurant;
 
         $dishes = $restaurant->dishes;
-        $orders = [];
+        $orders = collect();
 
         foreach ($dishes as $dish) {
-
-            foreach ($dish->orders as  $order) {
-
+            foreach ($dish->orders as $order) {
                 if (!isset($orders[$order->id])) {
-                    
-                    $orders[$order->id] = $order;
+                    $orders->put($order->id, $order);
                 }
-
             }
         }
+
+        // Ordina gli ordini in ordine decrescente di data created_at
+        $orders = $orders->sortByDesc('created_at')->values()->all();
 
         
 
