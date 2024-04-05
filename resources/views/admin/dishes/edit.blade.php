@@ -27,7 +27,7 @@
 
                         <label for="name" class="form-label">Nome Piatto</label>
                         <input type="text" class=" @error('name') is-invalid @enderror" id="name" name="name"
-                            placeholder="Inserisci il nome del Dish" maxlength="120" value="{{ old('name', $dish->name) }}">
+                            placeholder="Inserisci il nome del Dish" maxlength="120" value="{{ old('name', $dish->name) }}" required>
                         @error('name')
                             <div class="error">
                                 {{ $message }}
@@ -62,7 +62,7 @@
 
                         <label for="description" class="form-label">Descrizione</label>
                         <textarea type="text" class="@error('description') is-invalid @enderror" id="description" name="description"
-                            placeholder="Inserisci la descrizione del piatto" maxlength="4024" rows="4" cols="50">{{ old('description', $dish->description) }}</textarea>
+                            placeholder="Inserisci la descrizione del piatto" maxlength="4024" rows="4" cols="50" required>{{ old('description', $dish->description) }}</textarea>
                         @error('description')
                             <div class="error">
                                 {{ $message }}
@@ -72,7 +72,13 @@
                         <label for="price" class="form-label">Prezzo</label>
                         <input type="number" step="0.01" class="@error('price') is-invalid @enderror" id="price"
                             name="price" placeholder="Inserisci il prezzo del piatto"
-                            value="{{ old('price', $dish->price) }}">
+                            value="{{ old('price', $dish->price) }}" required>
+
+                            <div class="error validation d-none">
+                                <span>
+                                    Inserisci un valore valido
+                                </span>
+                            </div>
                         @error('price')
                             <div class="error">
                                 {{ $message }}
@@ -81,7 +87,7 @@
 
                         <label for="visible" class="form-label">Disponibile</label>
                         <input type="checkbox" id="visible" name="visible" value="1" class="visible-botton"
-                            @if (old('visible', $dish->visible)) checked @endif>
+                            @if (old('visible', $dish->visible)) checked @endif required>
                         @error('visible')
                             <div class="error">
                                 {{ $message }}
@@ -98,4 +104,22 @@
             </div>
         </div>
     </section>
+
+    <script>
+        
+        let min_prize = document.getElementById("price");
+
+        let warning = document.querySelector(".validation");
+
+        min_prize.addEventListener("input", function(){ 
+
+            if( min_prize.value < 0){
+                warning.classList.remove('d-none');
+            }
+            else{
+                warning.classList.add('d-none');
+            }
+        });
+
+    </script>
 @endsection
