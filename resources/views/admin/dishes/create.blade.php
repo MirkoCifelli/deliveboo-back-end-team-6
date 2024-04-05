@@ -20,7 +20,7 @@
                     <input type="text" class=" @error('name') is-invalid @enderror" id="name" name="name"
                         placeholder="Inserisci il nome del Dish" maxlength="120" value="{{ old('name') }}">
                     @error('name')
-                        <div class="error">
+                        <div class="warning error">
                             {{ $message }}
                         </div>
                     @enderror
@@ -29,7 +29,7 @@
                     <input type="file" class=" @error('img') is-invalid @enderror" id="img" name="img"
                         placeholder="Inserisci un'immagine del piatto">
                     @error('img')
-                        <div class="error">
+                        <div class="warning error">
                             {{ $message }}
                         </div>
                     @enderror
@@ -39,16 +39,22 @@
                         placeholder="Inserisci la descrizione del piatto" maxlength="4024" value="{{ old('description') }}" rows="4"
                         cols="50"></textarea>
                     @error('description')
-                        <div class="error">
+                        <div class="warning error">
                             {{ $message }}
                         </div>
                     @enderror
 
                     <label for="price" class="form-label">Prezzo</label>
                     <input type="number" step="0.01" class="@error('price') is-invalid @enderror" id="price"
-                        name="price" placeholder="Inserisci il prezzo del piatto" value="{{ old('price') }}">
+                        name="price" placeholder="Inserisci il prezzo del piatto" value="{{ old('price') }}" min:0>
+
+                        <div class="warning error validation d-none">
+                            <span>
+                                Inserisci un valore valido
+                            </span>
+                        </div>
                     @error('price')
-                        <div class="error">
+                        <div class="warning error">
                             {{ $message }}
                         </div>
                     @enderror
@@ -71,4 +77,21 @@
             </div>
         </div>
     </section>
+
+    <script>
+        
+        let min_price = document.getElementById("price");
+        let warning = document.querySelector(".validation");
+
+        min_price.addEventListener("input", function(){ 
+
+            if( min_price.value < 0){
+                warning.classList.remove('d-none');
+            }
+            else{
+                warning.classList.add('d-none');
+            }
+        });
+
+    </script>
 @endsection

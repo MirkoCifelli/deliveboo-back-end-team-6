@@ -24,16 +24,23 @@
 }
 
 //ERROR
-.error {
-    min-height: 70px;
-    line-height: 70px;
+.warning {
+    min-height: 50px;
+    line-height: 50px;
     text-align: center;
     vertical-align: center;
-    border: 2px solid rgb(207, 3, 3);
-    background-color: rgba(246, 147, 147, 0.496);
     font-weight: 500;
-    color: rgb(207, 3, 3);
+    border: 2px solid rgb(133, 133, 133);
+    background-color: rgba(210, 210, 210, 0.41);
+    color: rgb(88, 88, 88);
     margin-bottom: 15px;
+    &.error{
+        min-height: 70px;
+        line-height: 70px;
+        border: 2px solid rgb(207, 3, 3);
+        background-color: rgba(246, 147, 147, 0.496);
+        color: rgb(207, 3, 3);
+    }
 }
 
 // body{
