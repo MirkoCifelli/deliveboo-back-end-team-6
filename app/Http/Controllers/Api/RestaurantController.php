@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class RestaurantController extends Controller
 {
     public function index(){
-        $restaurants = Restaurant::with('dishes', 'typologies')->paginate('3');
+        $restaurants = Restaurant::with('dishes', 'typologies')->paginate('6');
         return response()->json([
             'success' => true,
             'results' => $restaurants
