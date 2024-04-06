@@ -2,29 +2,11 @@
 
 @section('page-title', 'Menù')
 
+{{-- @vite('resources/js/delete.js') --}}
+
 @section('main-content')
     <section class="menu">
-        <div class="modaleMio modaleMy d-none">
-            <div class="modal-content">
-                <p>
-                    Sei sicuro di voler cancellare?
-                </p>
-                <div class="btn-container">
-                    <div>
-                        {{-- <form action="{{ route('admin.dishes.destroy', ['dish' => $Singledish->id]) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button class="button delete" type="submit">Elimina</button>
-                        </form>  --}}
-                    </div>
-                    <div>
-                        <button class="btn cancel-btn" id="cancelDelete">
-                            Annulla
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> 
+         
         <div class="img-container">
             <div class="container_top">
                 <div>
@@ -41,7 +23,6 @@
                 </div>
             </div>
         </div>
-        {{-- @dd($dishes) --}}
         <div class="mycontaineroverflow">
             @if (session('dishDeleted'))
             <div class="container alert alert-danger">
@@ -53,7 +34,35 @@
             </div>
                 
             @endif
-            @foreach ($dishes as $key => $Singledish) 
+
+            @foreach ($dishes as $Singledish)
+                
+                <div>
+
+                    <div id="exampleModal{{$Singledish->id}}" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Conferma Eliminazione</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Sicuro di voler eliminare questo piatto?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                                    <form action="{{ route('admin.dishes.destroy', ['dish' => $Singledish->slug]) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Elimina</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <div class="mycontainermenu">
                     <div class="cardmenu">
                         
@@ -109,9 +118,11 @@
                                 </button>
                             </div>
                             <div>
-                                <button class="my-delete button delete">
-                                    Delete
-                                </button>
+                                <div>
+                                    <button class="button delete" data-bs-toggle="modal" data-bs-target="#exampleModal{{$Singledish->id}}">
+                                        Delete
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -121,23 +132,34 @@
     </section>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let deleteButtons = document.querySelectorAll('.my-delete');
 
-        let deleteButton = document.querySelectorAll(".my-delete");
+            deleteButtons.forEach(singleButton => {
+                singleButton.addEventListener('click', function() {
+                    // Mostra il modale di conferma eliminazione
+                    let modal = document.getElementById('confirmDeleteModal');
+                    modal.classList.add('show');
+                    modal.style.display = 'block';
+                    modal.setAttribute('aria-modal', 'true');
 
-        let flag = false;
+                    // Ascolta il click sul pulsante di conferma eliminazione
+                    let confirmButton = document.getElementById('confirmDeleteButton');
+                    confirmButton.addEventListener('click', function confirmDeleteHandler() {
+                        // Esegui qui la logica per eliminare il piatto
+                        let dishSlug = singleButton.getAttribute('data-id');
+                        console.log('Elimina il piatto con slug:', dishSlug);
 
-        deleteButton.forEach(singleButton => {
-            singleButton.addEventListener("click", function() {
-                flag = !flag;
-                console.log(flag);
+                        // Chiudi il modale di conferma eliminazione
+                        modal.classList.remove('show');
+                        modal.style.display = 'none';
+                        modal.setAttribute('aria-modal', 'false');
 
-                if (flag == true) {
-                    document.querySelector(".modaleMio").classList.remove('d-none');
-                }
-                else {
-                    document.querySelector(".modaleMio").classList.add('d-none');
-                }
-            }); 
+                        // Rimuovi l'ascoltatore dell'evento click per evitare duplicati
+                        confirmButton.removeEventListener('click', confirmDeleteHandler);
+                    });
+                });
+            });
         });
 
     </script>

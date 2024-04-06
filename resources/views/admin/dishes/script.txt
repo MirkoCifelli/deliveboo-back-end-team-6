@@ -1,0 +1,48 @@
+
+    document.addEventListener('DOMContentLoaded', function() {
+                                                            /*
+                                                                genero un array che contiene tutti i bottoni con classe .my-delete
+                                                            */
+        let deleteButtons = document.querySelectorAll('.my-delete');
+
+        deleteButtons.forEach(singleButton => {
+                                                            /*
+                                                                Ciclando sull'array che contiene gli elementi che hanno la classe 
+                                                                .myDelete, aggiungo ad ognuno di essi un addEventListener
+                                                            */
+            singleButton.addEventListener('click', function() {
+                                                            /*
+                                                                Al click di ogni singolo bottone, inizializzo una variabile
+                                                                'dishSlug' che conterrà il valore dell'attributo 'data-id'
+                                                                di quel bottone
+                                                                ( il quale è impostato per essere uguale allo slug del SingleDish )
+                                                            */
+                let dishSlug = this.getAttribute('data-id');
+                                                            /*
+                                                                Inizializzo poi una nuova variabile, la quale contiene 
+                                                                l'elemento del DOM che ha la classe '.deleteForm_'+dishSlug,
+                                                                ovvero la variabile in cui è racchiuso il valore dell'attributo
+                                                                'data-id' e di conseguenza lo slug del SingleDish. 
+                                                            */
+                let form = document.querySelector('.deleteForm_'+dishSlug);
+                console.log(form)
+                                                            /*
+                                                                Con la funzione setAttribute(), imposto al form l'attributo action,
+                                                                il quale imposterà il suo indirizzo verso la rotta destinata
+                                                                alla cancellazione del piatto che ha lo slug passato con dishSlug
+                                                            */
+                form.setAttribute('action', '/admin/dishes/'+dishSlug);
+                
+
+                document.querySelector('.modaleMio').classList.remove('d-none');
+            });
+
+        });
+
+        
+        document.getElementById('cancelDelete').addEventListener('click', function() {
+            
+            document.querySelector('.modaleMio').classList.add('d-none');
+        });
+    });
+
