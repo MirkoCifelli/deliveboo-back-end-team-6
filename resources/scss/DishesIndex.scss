@@ -114,8 +114,15 @@
     }
 
     /* Stili per la modale */
+    .modal-content{
+        border-radius: 0 !important;
+
+        .btn{
+            border-radius: 0 !important;
+            
+        }
+    }
     
-  
   
     .btn-container {
     margin-top: 20px;
