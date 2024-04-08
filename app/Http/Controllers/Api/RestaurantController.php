@@ -23,7 +23,7 @@ class RestaurantController extends Controller
 
         if(isset($typologies)){
             $restaurants->whereHas('typologies', function ($query) use ($typologies) {
-                $query->whereIn('typology_name_column', $typologies);
+                $query->whereIn('name', $typologies);
             });
         }
 
