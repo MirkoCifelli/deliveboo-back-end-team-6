@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
 
+// Helpers
+use Illuminate\Support\Str;
+
 // Models
 use App\Models\Restaurant;
 use App\Models\Typology;

@@ -10,8 +10,17 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    public function index(){
-        $restaurants = Restaurant::with('dishes', 'typologies')->paginate('6');
+    public function index(Request $request){
+
+        $slug = $request->input('slug');
+        $typologies = $request->input('typologies');
+
+        $restaurants = Restaurant::with('dishes', 'typologies')
+        ->where('slug', 'like', "%$slug%")
+        ->where('typologies', 'like', "%$typologies%")
+        ->paginate('6');
+
+        
         return response()->json([
             'success' => true,
             'results' => $restaurants
