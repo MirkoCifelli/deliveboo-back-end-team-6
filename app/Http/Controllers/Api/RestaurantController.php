@@ -44,7 +44,7 @@ class RestaurantController extends Controller
         /*
             Creo la query, impaginando con sei risultati per pagina
         */
-        $results = $restaurants->paginate(6)->get();
+        $results = $restaurants->paginate(6);
 
 
         
