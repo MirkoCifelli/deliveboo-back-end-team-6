@@ -15,15 +15,25 @@ class RestaurantController extends Controller
         $slug = $request->input('slug');
         $typologies = $request->input('typologies');
 
-        $restaurants = Restaurant::with('dishes', 'typologies')
-        ->where('slug', 'like', "%$slug%")
-        ->where('typologies', 'like', "%$typologies%")
-        ->paginate('6');
+        $restaurants = Restaurant::with('dishes', 'typologies');
+
+        if(isset($slug)){
+            $restaurants->where('slug', 'like', "%$slug%");
+        }
+
+        if(isset($typologies)){
+            $restaurants->whereHas('typologies', function ($query) use ($typologies) {
+                $query->whereIn('typology_name_column', $typologies);
+            });
+        }
+
+        $results = $restaurants->get();
+
 
         
         return response()->json([
             'success' => true,
-            'results' => $restaurants
+            'results' => $results
         ]);
     }
 
