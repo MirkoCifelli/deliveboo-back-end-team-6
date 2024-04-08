@@ -23,7 +23,7 @@ class RestaurantController extends Controller
             Per prima cosa creo una nuova instanza dell'oggetto Restaurant, 
             portando con sè le sue relazioni con i dishes e le typologies.
         */
-        $restaurants = Restaurant::with('dishes', 'typologies');
+        $restaurants = Restaurant::with('typologies');
 
         /*
             Tramite delle condizioni, costruisco l'instanza dell'oggetto,
@@ -55,6 +55,7 @@ class RestaurantController extends Controller
     }
 
     public function show(string $slug){
+
         $restaurant = Restaurant::with('dishes', 'typologies')->where('slug', $slug)->firstOrFail();
         return response()->json([
             'success' => true,
