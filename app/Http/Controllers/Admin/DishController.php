@@ -74,7 +74,7 @@ class DishController extends Controller
             'slug' => $slug,
             'description' => $validatedDishData['description'],
             'price' => $validatedDishData['price'],
-            'visible' => $validatedDishData['visible'],
+            'visible' => $validatedDishData['visible'] ?? 0,  // Set default value to 0 if 'visible' is not set
             'restaurant_id' => $validatedDishData['restaurant_id'],
             'img' => $dishImgPath,
         ]);
