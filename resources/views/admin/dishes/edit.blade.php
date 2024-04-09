@@ -11,7 +11,7 @@
                 Modifica del piatto
             </h1>
             @foreach ($errors->all() as $error)
-                <div class="error">
+                <div class="warning error">
                     {{ $error }}
                 </div>
             @endforeach
@@ -29,7 +29,7 @@
                         <input type="text" class=" @error('name') is-invalid @enderror" id="name" name="name"
                             placeholder="Inserisci il nome del Dish" maxlength="120" value="{{ old('name', $dish->name) }}" required>
                         @error('name')
-                            <div class="error">
+                            <div class="warning error">
                                 {{ $message }}
                             </div>
                         @enderror
@@ -47,7 +47,7 @@
                             </div>
 
                             @error('delete_img')
-                                <div class="error">
+                                <div class="warning error">
                                     {{ $message }}
                                 </div>
                             @enderror
@@ -64,7 +64,7 @@
                         <textarea type="text" class="@error('description') is-invalid @enderror" id="description" name="description"
                             placeholder="Inserisci la descrizione del piatto" maxlength="4024" rows="4" cols="50" required>{{ old('description', $dish->description) }}</textarea>
                         @error('description')
-                            <div class="error">
+                            <div class="warning error">
                                 {{ $message }}
                             </div>
                         @enderror
@@ -89,7 +89,7 @@
                         <input type="checkbox" id="visible" name="visible" value="1" class="visible-botton"
                             @if (old('visible', $dish->visible)) checked @endif required>
                         @error('visible')
-                            <div class="error">
+                            <div class="warning error">
                                 {{ $message }}
                             </div>
                         @enderror

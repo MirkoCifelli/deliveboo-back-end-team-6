@@ -10,7 +10,7 @@
                     <div class="my-card-body">
 
                         @foreach ($errors->all() as $error)
-                            <div class="error">
+                            <div class="warning error">
                                 {{ $error }}
                             </div>
                         @endforeach
