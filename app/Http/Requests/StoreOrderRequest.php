@@ -26,7 +26,7 @@ class StoreOrderRequest extends FormRequest
             'customer_lastname' => 'required|max:128',
             'customer_address' => 'required|max:128',
             'customer_phone' => 'required|max:20',
-            'customer_email' => 'required|email|unique:orders',
+            'customer_email' => 'required|email',
             'customer_total_price' => 'required|numeric|min:0'
         ];
     }
