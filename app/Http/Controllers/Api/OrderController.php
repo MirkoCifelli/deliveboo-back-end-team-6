@@ -14,11 +14,11 @@ class OrderController extends Controller
     public function store(StoreOrderRequest $request){
 
         $order = Order::create($request->validated());
-        // $orderDishes = $request->dishes;
+        $orderDishes = $request->dishes;
 
-        // foreach ($orderDishes as $dish) {
-        //     $order->dishes()->attach($dish['id'], ['quantity' => $dish['quantity']]);
-        // }
+        foreach ($orderDishes as $dish) {
+            $order->dishes()->attach($dish['id'], ['quantity' => $dish['quantity']]);
+        }
         
         return response()->json([
             'success' => true,

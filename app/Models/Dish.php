@@ -22,7 +22,6 @@ class Dish extends Model
     ];
 
     protected $hidden = [
-        'id',
         'resturant_id'
     ];
 
