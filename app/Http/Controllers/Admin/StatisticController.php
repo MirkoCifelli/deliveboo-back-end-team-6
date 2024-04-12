@@ -27,7 +27,6 @@ class StatisticController extends Controller
         $restaurant = $user->restaurant;
         $restaurantId = $restaurant->id;
 
-        //$restaurantId = 2; // Puoi sostituire questo con la variabile corretta
 
         $monthlyOrders = Order::selectRaw('MONTH(orders.created_at) AS month, COUNT(DISTINCT orders.id) AS total')
             ->join('dish_order', 'orders.id', '=', 'dish_order.order_id')
