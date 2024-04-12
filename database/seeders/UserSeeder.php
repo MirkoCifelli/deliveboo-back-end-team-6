@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
             'aruba.it'
         ];
         // ramdomizer parte iniziale e finale prima e dopo la @ con aggiunta di name(utilizzando faker) e password statica
-            for ($i=0; $i < 12 ; $i++) { 
+            for ($i=0; $i < 27 ; $i++) { 
                 $randomIndex = random_int(0,5);
                 $initDomain = explode('@',fake()->email());
                 $endDomain = $domain[$randomIndex];

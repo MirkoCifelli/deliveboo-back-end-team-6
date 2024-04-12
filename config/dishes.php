@@ -460,14 +460,6 @@ return [
                 'type' => 12
             ],
             [
-                'name' => 'Moussaka Magnifica',
-                'img' => 'Ristorante-12/moussaka-magnifica.jpg',
-                'description' => 'Un piatto greco classico con strati di melanzane grigliate, carne macinata di agnello, pomodori, patate e besciamella, gratinato al forno.',
-                'price' => 18.90,
-                'visible' => true,
-                'type' => 12
-            ],
-            [
                 'name' => 'Dolmades Delizia',
                 'img' => 'Ristorante-12/dolmades-delizia.jpg',
                 'description' => "Foglie di vite ripiene di riso, pomodori secchi, pinoli e uvetta, cotte lentamente in brodo di limone e servite con una salsa di yogurt all'aglio.",
@@ -490,6 +482,621 @@ return [
                 'price' => 9.95,
                 'visible' => true,
                 'type' => 12
+            ],
+            [
+                'name' => 'Spaghetti alla Carbonara',
+                'img' => 'Ristorante-12/baklava-bliss.jpg',
+                'description' => 'Spaghetti con pancetta croccante, uova fresche, pecorino romano e pepe nero.',
+                'price' => 12.50,
+                'visible' => true,
+                'type' => 13
+            ],
+            [
+                'name' => 'Pizza Quattro Stagioni',
+                'img' => 'Ristorante-12/baklava-bliss.jpg',
+                'description' => 'Pizza con pomodoro, mozzarella, funghi, prosciutto cotto, carciofi e olive.',
+                'price' => 10.50,
+                'visible' => true,
+                'type' => 13
+            ],
+            [
+                'name' => 'Tiramisù',
+                'img' => 'Ristorante-12/baklava-bliss.jpg',
+                'description' => ' Dolce al caffè con biscotti savoiardi, crema mascarpone e cacao.',
+                'price' => 6.50,
+                'visible' => true,
+                'type' => 13
+            ],
+            [
+                'name' => 'Risotto al Funghi Porcini',
+                'img' => 'Ristorante-12/baklava-bliss.jpg',
+                'description' => 'Risotto con funghi porcini freschi, prezzemolo e parmigiano reggiano.',
+                'price' => 14.00,
+                'visible' => true,
+                'type' => 13
+            ],
+            [
+                'name' => 'Tagliatelle al Ragu Bolognese',
+                'img' => '',
+                'description' => ' Tagliatelle fatte in casa con salsa di carne ricca e saporita.',
+                'price' => 14.00,
+                'visible' => true,
+                'type' => 13
+            ],
+            [
+                'name' => 'Classic Cheeseburger',
+                'img' => '',
+                'description' => 'Hamburger di manzo con formaggio cheddar, lattuga, pomodoro e salsa segreta.',
+                'price' => 9.99,
+                'visible' => true,
+                'type' => 14
+            ],
+            [
+                'name' => 'BBQ Bacon Burger',
+                'img' => '',
+                'description' => 'Hamburger con bacon croccante, cipolla fritta, formaggio affumicato e salsa barbecue.',
+                'price' => 11.50,
+                'visible' => true,
+                'type' => 14
+            ],
+            [
+                'name' => 'Chili Cheese Fries',
+                'img' => '',
+                'description' => 'Patatine fritte con chili con carne, formaggio fuso e jalapeños.',
+                'price' => 7.50,
+                'visible' => true,
+                'type' => 14
+            ],
+            [
+                'name' => 'Chicken Wings',
+                'img' => '',
+                'description' => 'Ali di pollo croccanti servite con salsa piccante o salsa barbecue.',
+                'price' => 8.99,
+                'visible' => true,
+                'type' => 14
+            ],
+            [
+                'name' => 'Milkshake al Cioccolato',
+                'img' => '',
+                'description' => 'Milkshake cremoso al cioccolato con panna montata.',
+                'price' => 5.00,
+                'visible' => true,
+                'type' => 14
+            ],
+            [
+                'name' => 'Tacos al Pastor',
+                'img' => '',
+                'description' => 'Tortillas di mais con maiale marinato, ananas, cipolla e coriandolo.',
+                'price' => 3.50,
+                'visible' => true,
+                'type' => 15
+            ],
+            [
+                'name' => 'Burrito con Pollo',
+                'img' => '',
+                'description' => 'Burrito ripieno di pollo alla griglia, riso, fagioli, formaggio e guacamole.',
+                'price' => 8.00,
+                'visible' => true,
+                'type' => 15
+            ],
+            [
+                'name' => 'Guacamole Fresco',
+                'img' => '',
+                'description' => 'Avocado schiacciato con pomodoro, cipolla, coriandolo e lime.',
+                'price' => 5.00,
+                'visible' => true,
+                'type' => 15
+            ],
+            [
+                'name' => 'Enchiladas con Salsa Verde',
+                'img' => '',
+                'description' => 'Tortillas ripiene di pollo, coperte con salsa verde e formaggio.',
+                'price' => 10.00,
+                'visible' => true,
+                'type' => 15
+            ],
+            [
+                'name' => 'Nachos Supreme',
+                'img' => '',
+                'description' => 'Nachos croccanti con carne macinata, formaggio fuso, panna acida, salsa e guacamole.',
+                'price' => 12.00,
+                'visible' => true,
+                'type' => 15
+            ],
+            [
+                'name' => 'Sashimi Misto',
+                'img' => '',
+                'description' => 'Assortimento di pesce crudo fresco a fette, inclusi salmone, tonno e branzino.',
+                'price' => 18.00,
+                'visible' => true,
+                'type' => 16
+            ],
+            [
+                'name' => 'Tempura di Gamberi e Verdure',
+                'img' => '',
+                'description' => 'Gamberi e verdure ricoperte di pastella leggera e fritte fino alla perfezione.',
+                'price' => 14.00,
+                'visible' => true,
+                'type' => 16
+            ],
+            [
+                'name' => 'Dragon Roll',
+                'img' => '',
+                'description' => 'California roll con avocado e gambero tempura, avvolto in salmone e decorato con salsa teriyaki.',
+                'price' => 16.00,
+                'visible' => true,
+                'type' => 16
+            ],
+            [
+                'name' => 'Uramaki California',
+                'img' => '',
+                'description' => 'Rotolo di riso rivestito di avocado, surimi, cetriolo e maionese, con topping di semi di sesamo.',
+                'price' => 10.00,
+                'visible' => true,
+                'type' => 16
+            ],
+            [
+                'name' => 'Nigiri Salmone',
+                'img' => '',
+                'description' => 'Riso compatto con fettina di salmone fresco sopra, servito con wasabi e salsa di soia.',
+                'price' => 5.00,
+                'visible' => true,
+                'type' => 16
+            ],
+            [
+                'name' => 'Gamberetti all\'Aglio',
+                'img' => '',
+                'description' => 'Gamberetti saltati con aglio, peperoncino e cipollotto.',
+                'price' => 12.00,
+                'visible' => true,
+                'type' => 17
+            ],
+            [
+                'name' => 'Anatra alla Pechinese',
+                'img' => '',
+                'description' => 'Anatra croccante con pancake, salsa hoisin, cetrioli e cipollotti.',
+                'price' => 18.00,
+                'visible' => true,
+                'type' => 17
+            ],
+            [
+                'name' => 'Maiale in Agrodolce',
+                'img' => '',
+                'description' => 'Pezzi di maiale croccante in salsa agrodolce.',
+                'price' => 14.00,
+                'visible' => true,
+                'type' => 17
+            ],
+            [
+                'name' => 'Ravioli al Vapore',
+                'img' => '',
+                'description' => 'Ravioli ripieni di carne di maiale e gamberetti, serviti con salsa di soia.',
+                'price' => 10.00,
+                'visible' => true,
+                'type' => 17
+            ],
+            [
+                'name' => 'Zuppa Wonton',
+                'img' => '',
+                'description' => 'Brodo con wonton ripieni di carne di maiale e gamberetti.',
+                'price' => 8.00,
+                'visible' => true,
+                'type' => 17
+            ],
+            [
+                'name' => 'Pollo Tikka Masala',
+                'img' => '',
+                'description' => 'Pollo marinato e cotto in una salsa di pomodoro, panna e spezie aromatiche.',
+                'price' => 14.50,
+                'visible' => true,
+                'type' => 18
+            ],
+            [
+                'name' => 'Pane Naan',
+                'img' => '',
+                'description' => 'Pane indiano soffice e leggero cotto in forno tandoor.',
+                'price' => 3.00,
+                'visible' => true,
+                'type' => 18
+            ],
+            [
+                'name' => 'Samosa Vegetariana',
+                'img' => '',
+                'description' => 'Triangoli croccanti ripieni di patate, piselli e spezie.',
+                'price' => 5.00,
+                'visible' => true,
+                'type' => 18
+            ],
+            [
+                'name' => 'Biryani di Verdure',
+                'img' => '',
+                'description' => 'Riso aromatico cotto con verdure miste e spezie.',
+                'price' => 12.00,
+                'visible' => true,
+                'type' => 18
+            ],
+            [
+                'name' => 'Lassi alla Mango',
+                'img' => '',
+                'description' => 'Bevanda tradizionale allo yogurt con polpa di mango.',
+                'price' => 4.00,
+                'visible' => true,
+                'type' => 18
+            ],
+            [
+                'name' => 'Insalata Mediterranea',
+                'img' => '',
+                'description' => 'Mix di verdure fresche con pomodori, olive, feta e condimento al limone.',
+                'price' => 9.50,
+                'visible' => true,
+                'type' => 19
+            ],
+            [
+                'name' => 'Couscous alle Verdure',
+                'img' => '',
+                'description' => 'Couscous leggero con verdure grigliate e salsa allo yogurt.',
+                'price' => 11.00,
+                'visible' => true,
+                'type' => 19
+            ],
+            [
+                'name' => 'Hummus con Pita',
+                'img' => '',
+                'description' => 'Crema di ceci con tahini, olio d\'oliva e paprika, servita con pane pita caldo.',
+                'price' => 7.00,
+                'visible' => true,
+                'type' => 19
+            ],
+            [
+                'name' => 'Falafel Wrap',
+                'img' => '',
+                'description' => 'Falafel croccanti avvolti in foglie di lattuga, pomodori e salsa tahini.',
+                'price' => 8.50,
+                'visible' => true,
+                'type' => 19
+            ],
+            [
+                'name' => 'Torta di Verdure al Forno',
+                'img' => '',
+                'description' => 'Torta rustica con verdure di stagione e formaggio fuso.',
+                'price' => 10.50,
+                'visible' => true,
+                'type' => 19
+            ],
+            [
+                'name' => 'Spaghetti alle Vongole',
+                'img' => '',
+                'description' => 'Spaghetti con vongole fresche, aglio, prezzemolo e peperoncino.',
+                'price' => 16.00,
+                'visible' => true,
+                'type' => 20
+            ],
+            [
+                'name' => 'Calamari Fritti',
+                'img' => '',
+                'description' => 'Calamari freschi fritti croccanti, serviti con salsa marinara.',
+                'price' => 13.50,
+                'visible' => true,
+                'type' => 20
+            ],
+            [
+                'name' => 'Salmone alla Griglia',
+                'img' => '',
+                'description' => 'Filetto di salmone fresco alla griglia con contorno di verdure alla griglia.',
+                'price' => 18.00,
+                'visible' => true,
+                'type' => 20
+            ],
+            [
+                'name' => 'Insalata di Mare',
+                'img' => '',
+                'description' => 'Mix di frutti di mare con gamberi, cozze, calamari e vongole in una vinaigrette leggera.',
+                'price' => 17.50,
+                'visible' => true,
+                'type' => 20
+            ],
+            [
+                'name' => 'Cioppino',
+                'img' => '',
+                'description' => 'Zuppa di pesce abbondante con cozze, vongole, gamberi, calamari e pesce misto.',
+                'price' => 20.00,
+                'visible' => true,
+                'type' => 20
+            ],
+            [
+                'name' => 'Pad Thai',
+                'img' => '',
+                'description' => 'Tagliolini di riso saltati con gamberi, uova, tofu, germogli di soia e arachidi.',
+                'price' => 12.00,
+                'visible' => true,
+                'type' => 21
+            ],
+            [
+                'name' => 'Tom Yum',
+                'img' => '',
+                'description' => 'Zuppa piccante di gamberi con erbe aromatiche, peperoncino, lime e citronella.',
+                'price' => 10.00,
+                'visible' => true,
+                'type' => 21
+            ],
+            [
+                'name' => 'Mango Sticky Rice',
+                'img' => '',
+                'description' => 'Riso glutinoso cotto al vapore con fette di mango dolce e salsa di cocco.',
+                'price' => 8.00,
+                'visible' => true,
+                'type' => 21
+            ],
+            [
+                'name' => 'Gaeng Keow Wan',
+                'img' => '',
+                'description' => 'Curry verde con pollo, melanzane, peperoni, basilico thai e latte di cocco.',
+                'price' => 14.00,
+                'visible' => true,
+                'type' => 21
+            ],
+            [
+                'name' => 'Som Tam',
+                'img' => '',
+                'description' => 'Insalata di papaya verde con gamberetti secchi, pomodori ciliegia, fagioli verdi e arachidi.',
+                'price' => 9.50,
+                'visible' => true,
+                'type' => 21
+            ],
+            [
+                'name' => 'Bibimbap',
+                'img' => '',
+                'description' => 'Riso misto con verdure saltate, carne marinata, uovo fritto e gochujang.',
+                'price' => 13.00,
+                'visible' => true,
+                'type' => 22
+            ],
+            [
+                'name' => 'Kimchi Pancake',
+                'img' => '',
+                'description' => 'Pancake croccante con kimchi e cipolla verde, servito con salsa di immersione.',
+                'price' => 9.00,
+                'visible' => true,
+                'type' => 22
+            ],
+            [
+                'name' => 'Japchae',
+                'img' => '',
+                'description' => 'Vermicelli di patate dolci saltati con verdure miste e carne marinata.',
+                'price' => 11.50,
+                'visible' => true,
+                'type' => 22
+            ],
+            [
+                'name' => 'Dak Bulgogi',
+                'img' => '',
+                'description' => 'Pollo marinato alla griglia con salsa bulgogi, servito con riso e contorno di kimchi.',
+                'price' => 14.50,
+                'visible' => true,
+                'type' => 22
+            ],
+            [
+                'name' => 'Tteokbokki',
+                'img' => '',
+                'description' => 'Bastoncini di riso piccanti in salsa gochujang con uova sode e verdure.',
+                'price' => 10.00,
+                'visible' => true,
+                'type' => 22
+            ],
+            [
+                'name' => 'Fajitas di Pollo',
+                'img' => '',
+                'description' => 'Strisce di pollo marinato con peperoni e cipolle, servite con tortillas calde, guacamole e pico de gallo.',
+                'price' => 15.00,
+                'visible' => true,
+                'type' => 23
+            ],
+            [
+                'name' => 'Pizza Margherita Piccante',
+                'img' => '',
+                'description' => 'Pizza con salsa di pomodoro, mozzarella, peperoncino fresco e basilico.',
+                'price' => 12.00,
+                'visible' => true,
+                'type' => 23
+            ],
+            [
+                'name' => 'Tortellini al Chipotle',
+                'img' => '',
+                'description' => 'Tortellini ripieni di formaggio in salsa di panna al chipotle affumicato.',
+                'price' => 14.00,
+                'visible' => true,
+                'type' => 23
+            ],
+            [
+                'name' => 'Enchiladas Verdes',
+                'img' => '',
+                'description' => 'Tortillas di mais ripiene di pollo e formaggio, ricoperte di salsa verde e formaggio.',
+                'price' => 13.50,
+                'visible' => true,
+                'type' => 23
+            ],
+            [
+                'name' => 'Tacos al Pastor',
+                'img' => '',
+                'description' => 'Tortillas di mais con maiale marinato, ananas, cipolla e coriandolo.',
+                'price' => 10.50,
+                'visible' => true,
+                'type' => 23
+            ],
+            [
+                'name' => 'Tokyo Burger',
+                'img' => '',
+                'description' => 'Hamburger di manzo con salsa teriyaki, alghe nori, cetrioli sottaceto e maionese giapponese, servito con patatine fritte.',
+                'price' => 13.00,
+                'visible' => true,
+                'type' => 24
+            ],
+            [
+                'name' => 'California Roll Burger',
+                'img' => '',
+                'description' => 'Hamburger di salmone grigliato con avocado, cetriolo, salsa teriyaki e maionese sriracha, servito con insalata di cavolo e zenzero marinato.',
+                'price' => 14.50,
+                'visible' => true,
+                'type' => 24
+            ],
+            [
+                'name' => 'Tempura Shrimp Burger',
+                'img' => '',
+                'description' => 'Hamburger di gamberi in pastella tempura croccante con lattuga, pomodoro e maionese wasabi, servito con patatine fritte.',
+                'price' => 15.00,
+                'visible' => true,
+                'type' => 24
+            ],
+            [
+                'name' => 'BBQ Chicken Teriyaki Burger',
+                'img' => '',
+                'description' => 'Hamburger di pollo alla griglia con salsa BBQ, salsa teriyaki, formaggio cheddar e cipolla croccante, servito con patatine fritte.',
+                'price' => 12.50,
+                'visible' => true,
+                'type' => 24
+            ],
+            [
+                'name' => 'Sushi Burger',
+                'img' => '',
+                'description' => 'Hamburger di tonno marinato con avocado, cetriolo, alghe nori e salsa di soia, servito con insalata di edamame.',
+                'price' => 16.00,
+                'visible' => true,
+                'type' => 24
+            ],
+            [
+                'name' => 'Paella di Mare',
+                'img' => '',
+                'description' => 'Risotto spagnolo con frutti di mare misti, pollo, chorizo e verdure.',
+                'price' => 18.00,
+                'visible' => true,
+                'type' => 25
+            ],
+            [
+                'name' => 'Tacos de Carnitas',
+                'img' => '',
+                'description' => 'Tortillas di mais con maiale brasato, cipolla, coriandolo e salsa al lime.',
+                'price' => 12.00,
+                'visible' => true,
+                'type' => 25
+            ],
+            [
+                'name' => 'Gazpacho',
+                'img' => '',
+                'description' => 'Zuppa fredda di pomodoro, peperoni, cetrioli, cipolle, aglio e olio d\'oliva.',
+                'price' => 9.00,
+                'visible' => true,
+                'type' => 25
+            ],
+            [
+                'name' => 'Churros',
+                'img' => '',
+                'description' => 'Dolci fritti spagnoli serviti con salsa al cioccolato calda.',
+                'price' => 7.50,
+                'visible' => true,
+                'type' => 25
+            ],
+            [
+                'name' => 'Quesadillas',
+                'img' => '',
+                'description' => 'Tortillas di farina ripiene di formaggio fuso e peperoni, servite con guacamole e panna acida.',
+                'price' => 10.00,
+                'visible' => true,
+                'type' => 25
+            ],
+            [
+                'name' => 'Gyros Pita',
+                'img' => '',
+                'description' => 'Pita greca ripiena di carne di maiale gyros, pomodori, cipolla e tzatziki.',
+                'price' => 11.00,
+                'visible' => true,
+                'type' => 26
+            ],
+            [
+                'name' => 'Manchurian Chicken',
+                'img' => '',
+                'description' => 'Pollo in salsa agrodolce cinese con peperoni e cipolle, servito con riso al vapore.',
+                'price' => 14.00,
+                'visible' => true,
+                'type' => 26
+            ],
+            [
+                'name' => 'Souvlaki di Agnello',
+                'img' => '',
+                'description' => 'Spiedini di agnello marinati e grigliati, serviti con tzatziki e insalata greca.',
+                'price' => 16.00,
+                'visible' => true,
+                'type' => 26
+            ],
+            [
+                'name' => 'Maiale in Salsa di Prugne',
+                'img' => '',
+                'description' => 'Pezzi di maiale brasato in salsa di prugne cinese, serviti con riso fritto.',
+                'price' => 13.50,
+                'visible' => true,
+                'type' => 26
+            ],
+            [
+                'name' => 'Vegetable Chow Mein',
+                'img' => '',
+                'description' => 'Tagliatelle di farina saltate con verdure miste e salsa di soia.',
+                'price' => 12.00,
+                'visible' => true,
+                'type' => 26
+            ],
+            [
+                'name' => 'Gamberi al Curry',
+                'img' => '',
+                'description' => 'Gamberi in salsa di curry cremoso, serviti con riso basmati e naan.',
+                'price' => 17.00,
+                'visible' => true,
+                'type' => 27
+            ],
+            [
+                'name' => 'Fish Tikka',
+                'img' => '',
+                'description' => 'Filetti di pesce marinati con spezie e yogurt, cotti nel forno tandoor.',
+                'price' => 15.00,
+                'visible' => true,
+                'type' => 27
+            ],
+            [
+                'name' => 'Mango Lassi',
+                'img' => '',
+                'description' => 'Bevanda al mango e yogurt, dolce e rinfrescante.',
+                'price' => 5.00,
+                'visible' => true,
+                'type' => 27
+            ],
+            [
+                'name' => 'Chicken Biryani',
+                'img' => '',
+                'description' => 'Riso basmati con pollo, spezie aromatiche e frutta secca, servito con raita.',
+                'price' => 16.50,
+                'visible' => true,
+                'type' => 27
+            ],
+            [
+                'name' => 'Palak Paneer',
+                'img' => '',
+                'description' => 'Spinaci freschi con formaggio indiano (paneer) in salsa cremosa di curry.',
+                'price' => 14.00,
+                'visible' => true,
+                'type' => 27
             ]
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
         ]
 ];
