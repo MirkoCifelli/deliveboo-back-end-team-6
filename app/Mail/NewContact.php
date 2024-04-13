@@ -14,13 +14,15 @@ class NewContact extends Mailable
     use Queueable, SerializesModels;
 
     public $order;
+    public $orderDishes;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($order)
+    public function __construct($order, $orderDishes)
     {
         $this->order = $order;
+        $this->orderDishes = $orderDishes;
     }
 
     /**

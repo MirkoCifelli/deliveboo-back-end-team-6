@@ -33,7 +33,7 @@ class OrderController extends Controller
         $userEmail = $user->email;
         
         
-        Mail::to($userEmail)->send(new NewContact($order));        
+        Mail::to($userEmail)->send(new NewContact($order, $orderDishes));        
 
         foreach ($orderDishes as $dish) {
             $order->dishes()->attach($dish['id'], ['quantity' => $dish['quantity']]);
