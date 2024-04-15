@@ -31,7 +31,7 @@ body {
             }
         }
     }
-
+    
     main {
         overflow: hidden;
         .myContainer {
@@ -91,3 +91,17 @@ body {
     margin: 0 auto;
     width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+    main { 
+        .myContainer {
+            .row {    
+                .col-10 {
+                    width: 100%;   
+                }
+            }
+        }
+    }
+  }
+
+

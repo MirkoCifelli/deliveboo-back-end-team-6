@@ -1,4 +1,6 @@
 .dishes-show {
+    height: 100%;
+    overflow-y: auto;
     .my-card {
         margin-top: 40px;
         max-width: 100%;
@@ -42,3 +44,16 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 768px) {
+    .dish-edit{
+        form{
+            div{
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }   
+  }

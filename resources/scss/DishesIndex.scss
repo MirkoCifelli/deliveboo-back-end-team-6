@@ -142,3 +142,36 @@
   
       
 }
+
+@media only screen and (max-width: 768px) {
+    .menu{
+        .mycontaineroverflow {
+        
+            .mycontainermenu {
+               
+                .cardmenu {
+                    flex-direction: column;
+                    height: 100%;
+                    .container_card_img {
+                       width: 80%;
+                        
+                    }
+                    .container_card_content {
+                       
+                       width: 80%;
+                    }
+    
+                    .button_container {
+                       display: flex;
+                       width: 100%;
+                       gap: 15px;
+                       >*{
+                        width: calc(100% / 3);
+
+                       }
+                    }
+                }
+            }
+        }
+      }
+    }

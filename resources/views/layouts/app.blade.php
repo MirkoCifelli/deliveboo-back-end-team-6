@@ -54,7 +54,7 @@
                             </li>
                         </ul>
                     </aside>
-                    <div class="col-10 ms-4">
+                    <div class="col-10 ms-md-4">
                         @yield('main-content')
                     </div>
                 </div>

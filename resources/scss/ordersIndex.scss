@@ -98,3 +98,22 @@
             }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .ordini{
+        
+        .mycontaineroverflow{
+    
+           
+                .mycontainermenu{
+    
+                    .cardmenu{
+                        flex-direction: column;
+                        .left{
+                            width: 100%; 
+                        }
+                    }
+                }
+            }
+        }
+    }

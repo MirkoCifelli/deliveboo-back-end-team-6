@@ -13,7 +13,7 @@
         </div>
 
         <div class="row g-0">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <ul class="restaurant-info">
                     <li>
                         <span>
@@ -49,11 +49,11 @@
                     </li>
                 </ul>
 
-                <h2>
+                <h2 class="p-2">
                     Menù
                 </h2>
 
-                <div class="restaurant-menu">
+                <div class="restaurant-menu p-2">
                     @foreach ($dishes as $singleDish)
                         <div class="dish">
                             <span>
