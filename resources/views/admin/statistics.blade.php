@@ -5,9 +5,22 @@
 @section('main-content')
   <section class="charts">
 
-    <canvas id="monthlyOrderChart" width="500" height="200"></canvas>
-  
-    <canvas id="yearlyOrderChart" width="500" height="200"></canvas>
+    <div class="charts-container">
+      
+      <h3>
+        Totale ordini per mese
+      </h3>
+      <div class="months-chart">
+        <canvas id="monthlyOrderChart" width="500" height="200"></canvas>
+      </div>
+      
+      <h3>
+        Totale ordini per anno
+      </h3>
+      <div class="yearly-chart">
+        <canvas id="yearlyOrderChart" width="500" height="200"></canvas>
+      </div>
+    </div>
 
   </section>
 
