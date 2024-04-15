@@ -64,7 +64,7 @@
 
                         <div>
                             <label for="vat_number">
-                                Partita IVA
+                                Partita IVA <span class="text-danger">*</span>
                             </label>
                             <input type="text" id="vat_number" name="vat_number" placeholder="inserisci la tua partita iva..." maxlength="11" value="{{ old ('vat_number')}}">
                         </div>
@@ -77,7 +77,7 @@
                         </div>
 
                         <div>
-                            <label for="typology_id">Typology</label>
+                            <label for="typology_id">Typology <span class="text-danger">*</span></label>
                             <div class="checkboxes">
                                 @foreach ($typologies as $typology)
                                     <label class="check-label" for="typology-{{ $typology->id }}">{{ $typology->name }}</label> 
