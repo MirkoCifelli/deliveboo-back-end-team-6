@@ -21,7 +21,7 @@
             <!-- Name -->
             <div>
                 <label for="name">
-                    Name
+                    Nome
                 </label>
                 <input type="text" id="name" name="name" value="{{ old ('name') }}">
             </div>
@@ -58,12 +58,12 @@
 
             <div>
                 <a href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    Sei già registrato?
                 </a>
             </div>
 
             <button class="login-button" type="submit">
-                Register
+                Registrati
             </button>
         </form>
     </section>

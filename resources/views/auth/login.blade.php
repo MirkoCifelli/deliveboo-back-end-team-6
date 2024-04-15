@@ -41,19 +41,19 @@
 
                 @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        Password dimenticata?
                     </a>
                 @endif
             </div>
             
             <button type="submit" class="login-button">
-                Log in
+                Accedi
             </button>
             <!-- Remember Me -->
             <div>
                 <label for="remember_me">
                     <input class="remember" type="checkbox" name="remember">
-                    <span>Remember me</span>
+                    <span>Ricordami</span>
                 </label>
             </div>
         </form>
