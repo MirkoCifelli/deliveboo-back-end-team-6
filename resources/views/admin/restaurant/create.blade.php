@@ -24,7 +24,7 @@
                             @csrf
             
                             <button type="submit" class="logout">
-                                Log Out
+                                Esci
                             </button>
                         </form>
                     </div>
@@ -77,7 +77,7 @@
                         </div>
 
                         <div>
-                            <label for="typology_id">Typology <span class="text-danger">*</span></label>
+                            <label for="typology_id">Scegli una o più tipologie di cucina <span class="text-danger">*</span></label>
                             <div class="checkboxes">
                                 @foreach ($typologies as $typology)
                                     <label class="check-label" for="typology-{{ $typology->id }}">{{ $typology->name }}</label> 
