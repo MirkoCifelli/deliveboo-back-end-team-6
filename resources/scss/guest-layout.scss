@@ -1,0 +1,33 @@
+.guest-layout{
+
+    main{
+
+        .myContainer{
+            ul{
+
+                list-style: none;
+                display: flex;
+                padding: 20px 0;
+                li{
+
+                    width: 50%;
+                    text-align: center;
+                    .link{
+                        display: inline-block;
+                        width: 100%;
+                        padding: 20px;
+                        text-decoration: none;
+                        color: black;
+                        background-color: rgb(199, 199, 199);
+                        border: 1px solid gray;
+                        transition: all .2s ease-in-out;
+                        &:hover{
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

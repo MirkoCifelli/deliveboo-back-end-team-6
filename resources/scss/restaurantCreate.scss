@@ -1,0 +1,93 @@
+.restaurant-create{
+    header{
+        .myContainer{
+
+            .row{
+
+                form{
+                    
+    
+                    .logout{
+                        
+
+                    }
+                }
+            }
+        }
+                
+    }
+
+    main{
+
+        .myContainer{
+
+            form{
+
+                div{
+
+
+                    label{
+
+                        margin-bottom: 20px;
+                        display: block;
+                        font-weight: bolder;
+                        font-size: 1.3rem;
+                    }
+                    
+                    input{
+
+                        width: 100%;
+                        background-color: transparent;
+                        border: 2px solid rgb(219, 219, 219);
+                        padding: 7px 20px;
+                        margin-bottom: 40px;
+                    }
+                }
+
+                div{
+
+                    label{
+                        width: 100%;
+                    }
+
+                    .checkboxes{
+
+                        display: flex;
+                        .check-label{
+                            margin-right: 8px;
+                            width: auto;
+                            font-size: 0.9rem;
+                        }
+                        input{
+                            
+                            margin-right: 15px;
+                            width: 20px;
+                            height: 20px;
+                            padding: 0;
+                        }
+                    }
+                    
+                }
+
+                div{
+                    button{
+                        width: 20%;
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 0.9rem;
+                        padding: 10px 20px;
+                        background-color: white;
+                        color: black;
+                        border: 2px solid black;
+                        transition: all 0.2s ease-in-out;
+                        &:hover {
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

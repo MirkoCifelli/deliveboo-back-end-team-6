@@ -1,0 +1,41 @@
+.charts{
+    height: 100%;
+    overflow-y: auto;
+
+    .charts-container{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        h3{
+            margin-bottom: 15px;
+        }
+        .months-chart{
+    
+            width: 80%;
+            margin-bottom: 50px;
+            border: 2px solid rgb(209, 209, 209);
+            border-radius: 15px;
+            padding: 8px;
+          #monthlyOrderChart{
+    
+          }
+        }
+        
+        .yearly-chart{
+    
+            width: 80%;
+            margin-bottom: 50px;
+            border: 2px solid rgb(209, 209, 209);
+            border-radius: 15px;
+            padding: 8px;
+          #yearlyOrderChart{
+    
+          }
+        }
+    }
+
+}

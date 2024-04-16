@@ -1,4 +1,12 @@
 <?php
+// Controllers
+use App\Http\Controllers\Api\RestaurantController;
+use App\Http\Controllers\Api\TypologyController;
+use App\Http\Controllers\Api\OrderController;
+
+// Models
+use App\Models\Restaurant;
+use App\Models\Typology;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +22,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+// });
+
+Route::name('api.')->group(function(){
+    Route::resource('restaurant', RestaurantController::class)->only([
+        'index',
+        'show'
+    ]);
+
+    Route::resource('typology', TypologyController::class)->only([
+        'index'
+    ]);
+
+    Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 });

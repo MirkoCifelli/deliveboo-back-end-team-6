@@ -1,0 +1,119 @@
+.ordini{
+    .img-container{
+
+        height: 150px;
+        background-color: rgb(240, 240, 240);
+        padding: 20px;
+        border-bottom: 2px solid black;
+        .container_top{
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            div{
+                h1{
+
+                    margin: 0;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .mycontaineroverflow{
+
+        height: calc(100vh - 250px);
+        overflow-y: auto;
+            .mycontainermenu{
+
+                display: flex;
+                flex-direction: column;
+                .cardmenu{
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    border-bottom: 1px solid rgb(213, 213, 213);
+                    width: 100%;
+                    height: 250px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .containerJ{
+                        width: auto;
+                        ul{
+                            list-style: none;
+                            padding: 0;
+                            li{
+
+                                margin-bottom: 20px;
+                                h2{
+
+                                }
+                            }
+                            li{
+                                span{
+                                    
+                                    &.price{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+
+                            }
+                            
+                        }
+                        &.left{
+
+                        }
+                        &.right{
+                            
+                        }
+                    }
+                    .button_container{
+
+                        width: auto;
+                        div{
+                            .button{
+                                width: 100%;
+                                border: none;
+                                padding: 12px 20px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                background-color: rgb(197, 197, 197);
+                                transition: all 0.2s ease-in-out;
+                                cursor: pointer;
+                                &.show{
+                                    background-color: #0B5ED7;
+                                }
+                                >*{
+                                    text-decoration: none;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ordini{
+        
+        .mycontaineroverflow{
+    
+           
+                .mycontainermenu{
+    
+                    .cardmenu{
+                        flex-direction: column;
+                        .left{
+                            width: 100%; 
+                        }
+                    }
+                }
+            }
+        }
+    }

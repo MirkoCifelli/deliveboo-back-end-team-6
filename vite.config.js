@@ -8,6 +8,16 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/scss/app.scss',
+                'resources/scss/layout.scss',
+                'resources/scss/dashboard.scss',
+                'resources/scss/menu.scss',
+                'resources/scss/restaurantCreate.scss',
+                'resources/scss/dishView.scss',
+                'resources/scss/DishesIndex.scss',
+                'resources/scss/guest-layout.scss',
+                'resources/scss/login-registration.scss',
+                'resources/scss/ordersIndex.scss',
+                'resources/scss/charts.scss',
                 'resources/js/app.js',
             ],
             refresh: true,

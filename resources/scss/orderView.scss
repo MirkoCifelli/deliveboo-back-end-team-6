@@ -1,0 +1,53 @@
+.order-show {
+
+    height: 100%;
+    overflow-y: auto;
+    .my-card {
+        margin-top: 40px;
+        max-width: 100%;
+        background-color: rgba(255, 255, 255, 0.351);
+        backdrop-filter: blur(6px);
+        padding: 15px 20px;
+        .my-card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            h1 {
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            p {
+                height: 100%;
+                margin-bottom: 40px;
+            }
+
+            div {
+                ul{
+                    
+                    padding: 0;
+                    list-style: none;
+                    li{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        background-color: rgb(237, 237, 237);
+                        padding: 8px 15px; 
+                        span{
+
+                        }
+                    }
+                    
+                }
+            }
+
+            .info {
+                width: 25%;
+                span {
+                    margin-left: 5px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

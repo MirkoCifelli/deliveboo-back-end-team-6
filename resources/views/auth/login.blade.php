@@ -1,43 +1,79 @@
 @extends('layouts.guest')
 
+@section('page-title', 'Login')
+
 @section('main-content')
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <section class="login">
 
-        <!-- Email Address -->
-        <div>
-            <label for="email">
-                Email
-            </label>
-            <input type="email" id="email" name="email">
-        </div>
+        @if($errors->any())
+            <div class="warning error">
+                <ul class="mb-0 p-0 d-flex justify-content-center align-items-center">
+                    @foreach ( $errors->all() as $error )
+                    <li class="p-0">{{ $error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-        <!-- Password -->
-        <div class="mt-4">
-            <label for="password">
-                Password
-            </label>
-            <input type="password" id="password" name="password">
-        </div>
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+    
+            <!-- Email Address -->
+            <div>
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" id="email" name="email" value="{{ old ('email') }}">
+            </div>
+    
+            <!-- Password -->
+            <div>
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" id="password" name="password" minlength="8">
 
-        <!-- Remember Me -->
-        <div class="mt-4">
-            <label for="remember_me">
-                <input id="remember_me" type="checkbox" name="remember">
-                <span>Remember me</span>
-            </label>
-        </div>
+                <div class="warning validation d-none">
+                    <span>
+                        Inserisci almeno 8 caratteri
+                    </span>
+                </div>
 
-        <div class="mt-4">
-            @if (Route::has('password.request'))
-                <a href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <button type="submit">
-                Log in
+                @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}">
+                        Password dimenticata?
+                    </a>
+                @endif
+            </div>
+            
+            <button type="submit" class="login-button">
+                Accedi
             </button>
-        </div>
-    </form>
+            <!-- Remember Me -->
+            <div>
+                <label for="remember_me">
+                    <input class="remember" type="checkbox" name="remember">
+                    <span>Ricordami</span>
+                </label>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        
+        let min_letters = document.getElementById("password");
+
+        let warning = document.querySelector(".validation");
+
+        min_letters.addEventListener("input", function(){ 
+
+            if( min_letters.value.length < 8){
+                warning.classList.remove('d-none');
+            }
+            else{
+                warning.classList.add('d-none');
+            }
+        });
+
+    </script>
 @endsection

@@ -1,15 +1,15 @@
-@extends('layouts.guest')
+@extends('layouts.app')
+
+@section('page-title', 'Restaurants Index')
 
 @section('main-content')
     <div class="row">
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <h1 class="text-center text-primary">
-                        Welcome!
+                    <h1 class="text-center text-success">
+                        Sei loggato! Sei su Restaurants Index
                     </h1>
-                    <br>
-                    La welcome page è una pagina pubblica (NON protetta)
                 </div>
             </div>
         </div>
