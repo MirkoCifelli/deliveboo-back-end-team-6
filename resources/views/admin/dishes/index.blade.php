@@ -93,13 +93,14 @@
                                     </h5>
                                 </li>
                                 <li> @if ($Singledish->visible != 1)
-                                    <h6>
-                                        Non Disponibile 
-                                    </h6>
+                                        <h6>
+                                            Non Disponibile 
+                                        </h6>
+                                    @else
+                                        <h6>
+                                            Disponibile
+                                        </h6>
                                     @endif
-                                    <h6>
-                                        Disponibile
-                                    </h6>
                                 </li>
                             </ul>
                         </div>

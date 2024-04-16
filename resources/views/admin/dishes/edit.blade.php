@@ -84,10 +84,14 @@
                                 {{ $message }}
                             </div>
                         @enderror
-
+                        
+                        
                         <label for="visible" class="form-label">Disponibile</label>
+                        
                         <input type="checkbox" id="visible" name="visible" value="1" class="visible-botton"
-                            @if (old('visible', $dish->visible)) checked @endif required>
+                            @if (old('visible', $dish->visible) == 1) checked @endif
+                            >
+                            {{-- @dd($dish) --}}
                         @error('visible')
                             <div class="warning error">
                                 {{ $message }}

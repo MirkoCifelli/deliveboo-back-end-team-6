@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('img', 1024)->nullable();
             $table->text('description');
             $table->decimal('price')->unsigned();
-            $table->boolean('visible');
+            $table->boolean('visible')->default(0);
             $table->foreignId('restaurant_id')->nullable()->constrained();
             $table->timestamps();
         });

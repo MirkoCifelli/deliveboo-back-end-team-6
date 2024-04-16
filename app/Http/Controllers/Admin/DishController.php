@@ -141,7 +141,13 @@ class DishController extends Controller
         $validatedDishData['img'] = $dishImgPath;
 
         $slug = str()->slug($validatedDishData['name']);
+
         $validatedDishData['slug'] = $slug;
+
+        if(!isset($validatedDishData['visible'])){
+
+            $validatedDishData['visible'] = 0;
+        }
 
         $dish->update($validatedDishData);
 
