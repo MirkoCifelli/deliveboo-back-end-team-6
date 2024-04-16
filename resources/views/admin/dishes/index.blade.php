@@ -67,13 +67,14 @@
                     <div class="cardmenu">
                         
                         <div class="container_card_img">
-                            @if ($Singledish->img != null)
+                            @if ($Singledish->img != null && $Singledish->img != 'images/')
                                 <img src="{{ asset('storage/'.$Singledish->img) }}">
-                                
                             @else
                                 <img src="{{ asset('storage/images/Logo/img-not-found.png') }}">
                             @endif
                         </div>
+
+                        {{-- @dd($Singledish) --}}
                         <div class="container_card_content">
                             <ul>
                                 <li>
