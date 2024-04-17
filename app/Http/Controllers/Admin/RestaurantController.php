@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 // Requests
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
+use Illuminate\Http\Request;
 
 // Helpers
 use Illuminate\Support\Str;
@@ -111,33 +112,17 @@ class RestaurantController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRestaurantRequest $request, string $slug)
-    {
-        // $validatedRestaurantData = $request->validated();
-        // $restaurant = Restaurant::where('slug', $slug)->firstOrFail();
-        // $ImgPath = $restaurant->img;
+    public function update(Request $request, string $slug)
+    {   
+        $user = Auth::user();
+        $restaurant = $user->restaurant;
 
-        // if (isset($validatedRestaurantData['img'])) {
-        //     if($ImgPath != null){
-        //         Storage::disk('public')->delete($restaurant->img);
-        //     }
+        if (isset($request['typologies'])) {
+            $typologies = $request['typologies'];
+            $restaurant->typologies()->sync($typologies);
+        }
 
-        //     $ImgPath = Storage::disk('public')->put('images', $validatedRestaurantData['img']);
-
-        //     }else if (isset($validatedRestaurantData['delete_img'])) {
-        //         Storage::disk('public')->delete($restaurant->img);
-
-        //         $ImgPath = null;
-        // }
-
-
-        // $validatedRestaurantData['img'] = $ImgPath;
-        // $validatedRestaurantData['slug'] = $slug = str()->slug($validatedRestaurantData['company_name']);
-        // $restaurant->update($validatedRestaurantData);
-        // // dd($validationResult);
-
-
-        // return redirect()->route('admin.restaurant.index');
+        return redirect()->route('admin.dashboard');
 
     }
 

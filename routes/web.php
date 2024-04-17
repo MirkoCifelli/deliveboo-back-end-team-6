@@ -33,7 +33,8 @@ Route::prefix('admin')
     Route::get('/dashboard', [AdminMainController::class, 'dashboard'])->name('dashboard');
     Route::resource('restaurant', AdminRestaurantController::class)->only([
         'create',
-        'store'
+        'store',
+        'update'
     ]);
     Route::resource('orders', AdminOrderController::class)->only([
         'index',

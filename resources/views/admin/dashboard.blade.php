@@ -63,6 +63,56 @@
                     @endforeach
                 </div>
             </div>
+
+            <div class="col-md-6">
+                <h3>
+                    Le tipologie della tua cucina
+                </h3>
+                <div class="typologies">
+                    @foreach ($restaurant->typologies as $typology)
+                        <div class="single-typology">
+                            <span>
+                                {{ $typology->name }}
+                            </span>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="button-add-typology">
+                    <span id="button-text">
+                        Aggiungi tipologia
+                    </span>
+
+                    <form id="add-typology" class="d-none" action="{{ route('admin.restaurant.update', ['restaurant' => $restaurant->slug]) }}" method="POST" enctype="multipart/form-data"> 
+                        @csrf
+                        @method('PUT')
+
+                        <div class="back">
+                            <
+                        </div>
+                        <div class="checkboxes">
+                            @foreach ($typologies as $typology)
+                                <div class="singleTypology">
+                                    
+                                    <input
+                                    @if ($restaurant->typologies->contains($typology->id))
+                                        checked
+                                    @endif
+                                        type="checkbox"
+                                        id="typology-{{ $typology->id }}"
+                                        name="typologies[]"
+                                        value="{{ $typology->id }}">
+                                    <label class="check-label" for="typology-{{ $typology->id }}">{{ $typology->name }}</label> 
+                                    
+                                </div>
+                            @endforeach
+                        </div>
+
+                        <button type="submit">
+                            Aggiungi
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -76,5 +126,49 @@
 
             document.querySelector('.img-container').style.backgroundImage = `url('${imageUrl}')`;
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let buttonTypology = document.querySelector('.button-add-typology');
+            let form = document.getElementById('add-typology');
+            let text = document.getElementById('button-text');
+            let backButton = document.querySelector('.back');
+
+            if (buttonTypology) {
+                buttonTypology.addEventListener('click', function(){
+                    if(!this.classList.contains('checkbox-container')){
+                        
+                        this.classList.remove('button-add-typology');
+                        this.classList.add('checkbox-container');
+                        text.classList.add('d-none');
+                    }
+                    
+                    if(this.classList.contains('checkbox-container')){
+                        
+                        form.classList.remove('d-none');
+                    }
+
+                    console.log(buttonTypology.classList);
+                    console.log(form.classList);
+                });
+            }
+
+            if(backButton){
+                backButton.addEventListener('click', function(event){
+                    event.stopPropagation();
+
+                    if(buttonTypology.classList.contains('checkbox-container')){
+                        
+                        buttonTypology.classList.add('button-add-typology');
+                        buttonTypology.classList.remove('checkbox-container');
+                        form.classList.add('d-none');
+                        text.classList.remove('d-none');
+                    }
+
+                    console.log('ciao')
+                })
+            }
+
+        });
+
     </script>
 @endsection

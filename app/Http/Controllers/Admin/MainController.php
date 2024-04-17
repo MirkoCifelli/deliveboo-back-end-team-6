@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 //Models
 use App\Models\Restaurant;
 use App\Models\Dish;
+use App\Models\Typology;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -35,8 +36,9 @@ class MainController extends Controller
             if($restaurant){
 
                 $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+                $typologies = Typology::all();
 
-                return view('admin.dashboard', compact('restaurant', 'dishes'));
+                return view('admin.dashboard', compact('restaurant', 'dishes', 'typologies'));
             }else{
 
                 return redirect()->route('admin.restaurant.create');
