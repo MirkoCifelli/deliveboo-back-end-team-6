@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->decimal('price')->unsigned();
             $table->boolean('visible')->default(0);
-            $table->foreignId('restaurant_id')->nullable()->constrained();
+            $table->foreignId('restaurant_id')->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
