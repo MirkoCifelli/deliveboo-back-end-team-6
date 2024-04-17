@@ -26,7 +26,7 @@
                        
                         <div>
                             <div class="cover_img">
-                                @if ($dish->img != null)  
+                                @if ($dish->img != null && $dish->img != 'images/')  
                                     <img src="{{ asset('storage/' . $dish->img) }}">
                                 @else
                                     <img src="{{ asset('storage/images/Logo/img-not-found.png') }}">

@@ -38,7 +38,7 @@
                         <input type="file" class=" @error('img') is-invalid @enderror" id="img" name="img"
                             placeholder="Inserisci un'immagine del piatto">
 
-                        @if ($dish->img != null)
+                        @if ($dish->img != null && $dish->img != 'images/')
                             <div class="delete-image">
                                 <label for="delete_img">
                                     Rimuovi immagine
