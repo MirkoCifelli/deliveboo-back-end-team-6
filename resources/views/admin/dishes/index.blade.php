@@ -108,21 +108,21 @@
                             <div>
                                 <button class="button show">
                                     <a href="{{ route('admin.dishes.show', ['dish' => $Singledish->slug]) }}">
-                                        Show
+                                        Mostra
                                     </a>
                                 </button>
                             </div>
                             <div>
                                 <button class="button edit">
                                     <a href="{{ route('admin.dishes.edit', ['dish' => $Singledish->slug]) }}">
-                                        Edit
+                                        Modifica
                                     </a>
                                 </button>
                             </div>
                             <div>
                                 <div>
                                     <button class="button delete" data-bs-toggle="modal" data-bs-target="#exampleModal{{$Singledish->id}}">
-                                        Delete
+                                        Elimina
                                     </button>
                                 </div>
                             </div>

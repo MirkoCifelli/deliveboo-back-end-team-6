@@ -9,6 +9,7 @@
         background-position: center;
         align-items: center;
         border-bottom: 2px solid black;
+        position: relative;
         h1{
 
             color: white;
@@ -20,6 +21,78 @@
             height: 100%;
             display: flex;
             align-items: center;
+        }
+    }
+
+    .img-edit-button{
+
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        background-color: aliceblue;
+        padding: 0 16px;
+        height: 40px;
+        line-height: 40px;
+        margin-right: 16px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &.input-img{
+
+            height: 60px;
+            padding: 8px;
+            background-color: rgba(255, 255, 255, 0.507);
+            transition: all .3s ease-in-out;
+            form{
+                
+                display: flex;
+                justify-content: space-between;
+                height: 100%;
+                .custom-input{
+
+                    position: relative;
+                    overflow: hidden;
+                    display: inline-block;
+                    .custom-file-upload-button {
+                        display: inline-block;
+                        padding: 0 20px;
+                        height: 40px;
+                        margin-right: 16px;
+                        background-color: #ffffff;
+                        color: black;
+                        border: 1px solid black;
+                        cursor: pointer;
+                    }
+                    #img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                }
+                button{
+                    height: 100%;
+                    padding: 0 16px;
+                    border: none;
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+        #edit-img-text{
+
+        }
+        #edit-img{
+
+            input{
+
+            }
+
+            button{
+
+            }
         }
     }
 
@@ -129,8 +202,9 @@
                     display: flex;
                     flex-direction: column;
                     .back{
-                        font-size: 1.5rem;
+                        font-size: 1rem;
                         cursor: pointer;
+                        padding: 8px;
                     }
                     .checkboxes{
 

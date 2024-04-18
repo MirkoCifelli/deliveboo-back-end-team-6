@@ -117,6 +117,24 @@ class RestaurantController extends Controller
         $user = Auth::user();
         $restaurant = $user->restaurant;
 
+        $restaurantImgPath = $restaurant->img;
+
+
+        if ($request['img']) {
+            if ($restaurantImgPath != null){
+                Storage::disk('public')->delete($restaurant->img);
+            }
+        
+            $restaurantImgPath = Storage::disk('public')->put('images', $request['img']);
+            
+            $imgName = basename($restaurantImgPath);
+            
+            $restaurant->img = $imgName;
+        }
+        
+        $restaurant->update();
+
+
         if (isset($request['typologies'])) {
             $typologies = $request['typologies'];
             $restaurant->typologies()->sync($typologies);
